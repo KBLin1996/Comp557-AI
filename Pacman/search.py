@@ -88,7 +88,6 @@ def depthFirstSearch(problem):
     """
     "*** YOUR CODE HERE ***"
     state = problem.getStartState() # Get start state
-    get = list()    # Get information of the next step
     s = util.Stack()    # A variable of stack
     record = list() # Record the position
 
