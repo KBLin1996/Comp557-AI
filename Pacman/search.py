@@ -87,6 +87,31 @@ def depthFirstSearch(problem):
     print("Start's successors:", problem.getSuccessors(problem.getStartState()))
     """
     "*** YOUR CODE HERE ***"
+    state = problem.getStartState() # Get start state
+    get = list()    # Get information of the next step
+    s = util.Stack()    # A variable of stack
+    record = list() # Record the position
+
+    s.push((state, [], 0))  # Push the initial state
+    while not s.isEmpty():
+        (pos, direction, cost) = s.pop()
+        if pos in record:
+            continue
+        record.append(pos)
+
+        # Get information of the successor
+        info = problem.getSuccessors(pos)
+
+        for i in info:
+            if problem.isGoalState(i[0]):   # Check if the successor is goal
+                return direction + [i[1]]
+            else:
+                if i[0] not in record:
+                    s.push((i[0], direction + [i[1]], i[2] + cost))
+
+    if s.isEmpty():
+        print("Error! The stack is empty.")
+        return 0
     util.raiseNotDefined()
 
 def breadthFirstSearch(problem):
