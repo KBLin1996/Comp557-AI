@@ -94,6 +94,8 @@ def depthFirstSearch(problem):
     s.push((state, [], 0))  # Push the initial state
     while not s.isEmpty():
         (pos, direction, cost) = s.pop()
+        if problem.isGoalState(pos):
+            return direction
         if pos in record:
             continue
         record.append(pos)
@@ -102,20 +104,39 @@ def depthFirstSearch(problem):
         info = problem.getSuccessors(pos)
 
         for i in info:
-            if problem.isGoalState(i[0]):   # Check if the successor is goal
-                return direction + [i[1]]
-            else:
-                if i[0] not in record:
-                    s.push((i[0], direction + [i[1]], i[2] + cost))
+            if i[0] not in record:
+                s.push((i[0], direction + [i[1]], cost + i[2]))
 
     if s.isEmpty():
-        print("Error! The stack is empty.")
+        print("Error! The stack is empty but no Goal is found.")
         return 0
     util.raiseNotDefined()
 
 def breadthFirstSearch(problem):
     """Search the shallowest nodes in the search tree first."""
     "*** YOUR CODE HERE ***"
+    state = problem.getStartState()
+    q = util.Queue()
+    record = list()
+
+    q.push((state, [], 0))
+    while not q.isEmpty():
+        (pos, direction, cost) = q.pop()
+        if problem.isGoalState(pos):
+            return direction
+        if pos in record:
+            continue
+        record.append(pos)
+
+        info = problem.getSuccessors(pos)
+
+        for i in info:
+            if i[0] not in record:
+                q.push((i[0], direction + [i[1]], cost + i[2]))
+
+    if q.isEmpty():
+        print("Error! The queue is empty but no Goal is found.")
+
     util.raiseNotDefined()
 
 def uniformCostSearch(problem):
