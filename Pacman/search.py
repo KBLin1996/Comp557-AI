@@ -89,22 +89,22 @@ def depthFirstSearch(problem):
     "*** YOUR CODE HERE ***"
     state = problem.getStartState() # Get start state
     s = util.Stack()    # A variable of stack
-    record = list() # Record the position
+    visited = list() # Record the position
 
     s.push((state, [], 0))  # Push the initial state
     while not s.isEmpty():
         (pos, direction, cost) = s.pop()
         if problem.isGoalState(pos):
             return direction
-        if pos in record:
+        if pos in visited:
             continue
-        record.append(pos)
+        visited.append(pos)
 
         # Get information of the successor
         info = problem.getSuccessors(pos)
 
         for i in info:
-            if i[0] not in record:
+            if i[0] not in visited:
                 s.push((i[0], direction + [i[1]], cost + i[2]))
 
     if s.isEmpty():
@@ -117,21 +117,21 @@ def breadthFirstSearch(problem):
     "*** YOUR CODE HERE ***"
     state = problem.getStartState()
     q = util.Queue()
-    record = list()
+    visited = list()
 
     q.push((state, [], 0))
     while not q.isEmpty():
         (pos, direction, cost) = q.pop()
         if problem.isGoalState(pos):
             return direction
-        if pos in record:
+        if pos in visited:
             continue
-        record.append(pos)
+        visited.append(pos)
 
         info = problem.getSuccessors(pos)
 
         for i in info:
-            if i[0] not in record:
+            if i[0] not in visited:
                 q.push((i[0], direction + [i[1]], cost + i[2]))
 
     if q.isEmpty():
@@ -143,26 +143,30 @@ def uniformCostSearch(problem):
     """Search the node of least total cost first."""
     "*** YOUR CODE HERE ***"
     state = problem.getStartState()
-    q = util.PriorityQueue()
-    record = list()
+    frontier = util.PriorityQueue()
+    frontier_info = dict()
+    visited = list()
 
-    q.push((state, [], 0), 0)
-    while not q.isEmpty():
-        (pos, direction, cost) = q.pop()
+    frontier.push((state, [], 0), 0)
+    while not frontier.isEmpty():
+        (pos, direction, cost) = frontier.pop()
         if problem.isGoalState(pos):
             return direction
-        if pos in record:
+        if pos in visited:
             continue
-        record.append(pos)
+        visited.append(pos)
 
         info = problem.getSuccessors(pos)
 
         for i in info:
-            if i[0] not in record:
-                q.push((i[0], direction + [i[1]], cost + i[2]),cost + i[2])
+            if i[0] not in visited and i[0] not in frontier_info.keys():
+                frontier.push((i[0], direction + [i[1]], cost + i[2]), cost + i[2])
+            elif i[0] in frontier_info.keys() and cost + i[2] < frontier_info[i[0]]:
+                frontier.update((i[0], direction + [i[1]], cost + i[2]), cost + i[2])
 
-    if q.isEmpty():
-        print("Error! The queue is empty but no Goal is found.")
+    if frontier.isEmpty():
+        print("Error! The priority queue is empty but no Goal is found.")
+    util.raiseNotDefined()
 
 def nullHeuristic(state, problem=None):
     """
