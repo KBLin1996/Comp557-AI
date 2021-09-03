@@ -304,8 +304,7 @@ class CornersProblem(search.SearchProblem):
         """
         "*** YOUR CODE HERE ***"
         # Check if self.find_corners all return True
-        print(self.visited_corners)
-        return all(self.visited_corners)
+        return all(state[1])
 
     def getSuccessors(self, state):
         """
@@ -332,13 +331,11 @@ class CornersProblem(search.SearchProblem):
 
             if not hitsWall:
                 next_state = (nextx, nexty)
-                print(next_state)
                 if next_state in self.corners and next_state not in self.visited_corners:
                     # Mark we visited the corner
                     temp = list(self.visited_corners)
                     temp[self.corners.index(next_state)] = True
                     self.visited_corners = tuple(temp)
-                    self.visited_corners[self.corners.index(next_state)] = True
                 cost = 1
                 successors.append(((next_state, self.visited_corners), action, cost))
 
