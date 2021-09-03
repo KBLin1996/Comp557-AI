@@ -199,10 +199,10 @@ def aStarSearch(problem, heuristic=nullHeuristic):
         for i in info:
             heuristic_diff = heuristic(i[0], problem) - heuristic(pos, problem)
             if i[0] not in visited and i[0] not in frontier_info.keys():
-                frontier.push((i[0], direction + [i[1]], cost + i[2] + heuristic_diff), cost + heuristic_diff)
+                frontier.push((i[0], direction + [i[1]], cost + i[2] + heuristic_diff), cost + i[2] + heuristic_diff)
                 frontier_info[i[0]] = cost + i[2] + heuristic_diff
             elif i[0] in frontier_info.keys() and cost + i[2] + heuristic_diff < frontier_info[i[0]]:
-                frontier.update((i[0], direction + [i[1]], cost + i[2] + heuristic_diff), cost + heuristic_diff)
+                frontier.update((i[0], direction + [i[1]], cost + i[2] + heuristic_diff), cost + i[2] + heuristic_diff)
                 frontier_info[i[0]] = cost + i[2] + heuristic_diff
 
     if frontier.isEmpty():
