@@ -288,7 +288,7 @@ class CornersProblem(search.SearchProblem):
         # Please add any code here which you would like to use
         # in initializing the problem
         "*** YOUR CODE HERE ***"
-        self.visited_corners = [False, False, False, False]
+        self.visited_corners = (False, False, False, False)
 
     def getStartState(self):
         """
@@ -335,6 +335,9 @@ class CornersProblem(search.SearchProblem):
                 print(next_state)
                 if next_state in self.corners and next_state not in self.visited_corners:
                     # Mark we visited the corner
+                    temp = list(self.visited_corners)
+                    temp[self.corners.index(next_state)] = True
+                    self.visited_corners = tuple(temp)
                     self.visited_corners[self.corners.index(next_state)] = True
                 cost = 1
                 successors.append(((next_state, self.visited_corners), action, cost))
@@ -501,7 +504,7 @@ class ClosestDotSearchAgent(SearchAgent):
         problem = AnyFoodSearchProblem(gameState)
 
         "*** YOUR CODE HERE ***"
-        util.raiseNotDefined()
+        search.uniformCostSearch(problem)
 
 class AnyFoodSearchProblem(PositionSearchProblem):
     """
@@ -537,7 +540,7 @@ class AnyFoodSearchProblem(PositionSearchProblem):
         x,y = state
 
         "*** YOUR CODE HERE ***"
-        util.raiseNotDefined()
+        return (x == self.food[0][0] and y == self.food[0][1])
 
 def mazeDistance(point1, point2, gameState):
     """

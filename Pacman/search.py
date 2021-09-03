@@ -110,7 +110,6 @@ def depthFirstSearch(problem):
     if s.isEmpty():
         print("Error! The stack is empty but no Goal is found.")
         return 0
-    util.raiseNotDefined()
 
 def breadthFirstSearch(problem):
     """Search the shallowest nodes in the search tree first."""
@@ -136,8 +135,6 @@ def breadthFirstSearch(problem):
 
     if q.isEmpty():
         print("Error! The queue is empty but no Goal is found.")
-
-    util.raiseNotDefined()
 
 def uniformCostSearch(problem):
     """Search the node of least total cost first."""
@@ -168,7 +165,6 @@ def uniformCostSearch(problem):
 
     if frontier.isEmpty():
         print("Error! The priority queue is empty but no Goal is found.")
-    util.raiseNotDefined()
 
 def nullHeuristic(state, problem=None):
     """
@@ -207,7 +203,6 @@ def aStarSearch(problem, heuristic=nullHeuristic):
 
     if frontier.isEmpty():
         print("Error! The priority queue is empty but no Goal is found.")
-    util.raiseNotDefined()
 
 
 # Abbreviations
