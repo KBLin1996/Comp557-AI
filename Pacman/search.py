@@ -161,8 +161,10 @@ def uniformCostSearch(problem):
         for i in info:
             if i[0] not in visited and i[0] not in frontier_info.keys():
                 frontier.push((i[0], direction + [i[1]], cost + i[2]), cost + i[2])
+                frontier_info[i[0]] = cost + i[2]
             elif i[0] in frontier_info.keys() and cost + i[2] < frontier_info[i[0]]:
                 frontier.update((i[0], direction + [i[1]], cost + i[2]), cost + i[2])
+                frontier_info[i[0]] = cost + i[2]
 
     if frontier.isEmpty():
         print("Error! The priority queue is empty but no Goal is found.")
@@ -195,10 +197,13 @@ def aStarSearch(problem, heuristic=nullHeuristic):
         info = problem.getSuccessors(pos)
 
         for i in info:
+            heuristic_diff = heuristic(i[0], problem) - heuristic(pos, problem)
             if i[0] not in visited and i[0] not in frontier_info.keys():
-                frontier.push((i[0], direction + [i[1]], cost + i[2]), cost + heuristic(i[0], problem))
-            elif i[0] in frontier_info.keys() and cost + i[2] + heuristic(i[0], problem) < frontier_info[i[0]]:
-                frontier.update((i[0], direction + [i[1]], cost + i[2]), cost + heuristic(i[0], problem))
+                frontier.push((i[0], direction + [i[1]], cost + i[2] + heuristic_diff), cost + heuristic_diff)
+                frontier_info[i[0]] = cost + i[2] + heuristic_diff
+            elif i[0] in frontier_info.keys() and cost + i[2] + heuristic_diff < frontier_info[i[0]]:
+                frontier.update((i[0], direction + [i[1]], cost + i[2] + heuristic_diff), cost + heuristic_diff)
+                frontier_info[i[0]] = cost + i[2] + heuristic_diff
 
     if frontier.isEmpty():
         print("Error! The priority queue is empty but no Goal is found.")
