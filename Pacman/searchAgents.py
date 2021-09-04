@@ -487,23 +487,13 @@ def foodHeuristic(state, problem):
 
     "*** YOUR CODE HERE ***"
     foodList = foodGrid.asList()
-    length = len(foodList)
-    if problem.isGoalState(state) or length == 0:
+    if problem.isGoalState(state) or len(foodList) == 0:
         return 0
 
     cost = 0
-    while foodList:
-        minF = foodList[0]
-        minD = mazeDistance(position, minF, problem.startingGameState)
-        for food in foodList:
-            d = mazeDistance(position, food, problem.startingGameState)
-            if d < minD:
-                minD = d
-                minF = food
-        position = minF
-        foodList.remove(minF)
-        cost += minD
-    return cost / length
+    for food_pos in foodList:
+        cost += mazeDistance(position, food_pos, problem.startingGameState)
+    return cost / len(foodList)
 
 class ClosestDotSearchAgent(SearchAgent):
     "Search for all food using a sequence of searches"
