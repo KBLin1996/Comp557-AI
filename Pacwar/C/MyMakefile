@@ -1,0 +1,34 @@
+#
+# This is a sample makefile for linking the PacWar guts into your
+# own program
+
+CC = gcc
+CFLAGS = -g -Wall 
+
+.c.o:
+	$(CC) -c $(CC_SWITCHES) $<
+
+EXE = pacsearch
+
+# add your file to the OBJS list below
+OBJS = PacWarGuts.o
+
+AC_FLAGS = -DHAVE_UNISTD_H=1 -DNO_STDLIB_H=1
+
+LIBS    = -lm
+INCLUDE = 
+
+CC_SWITCHES = ${CFLAGS} ${INCLUDE} ${AC_FLAGS}
+
+all: 	$(EXE)
+$(EXE):	$(OBJS)
+	${CC} ${CC_SWITCHES} ${OBJS} ${LIBS} -o $(EXE)
+
+clean:  
+	rm -rf $(EXE) $(OBJS)
+
+
+
+
+
+

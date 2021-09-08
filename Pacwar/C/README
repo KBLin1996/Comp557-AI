@@ -1,0 +1,80 @@
+##################################################################################
+# This is the comp440 PacWar Simulator.  On Mac, you can run it directly via
+#
+#                  ./myWish -f PacWar.tcl
+#
+# to get things started.
+#
+# if you have trouble with the GUI, installing XQuartz (https://www.xquartz.org/)
+# may work.
+#
+##################################################################################
+
+# NOTE: The Makefile in this folder has been written for MacOS
+# You will have to point to the location of X11 and tcl/tk libraries on your
+# platform to use the Makefile on a non-Mac machine.
+# At the Makefile, please set TCLTK_INCLUDE, TCLTK_LIBS, X11_INCLUDE, X11_LIBS 
+# variables and DTK_LIBRARY option correspond to your environment.
+# Make sure you have the latest version of XCode with xcode-select --install
+
+# You can remake everything by 
+# >> rm *.o
+# >> make all
+#
+##################################################################################
+
+##################################################################################
+# If you want to modify this code in any way, copy the contents of the 
+# directory named C to your own directory. You can link to the
+# bitmaps directory to save space by typing
+#       ln -s C/bitmaps 
+# from your directory.
+#
+# Note that the object file PacWarGuts.o can be used to test a species
+# and/or run a duel without using the graphics.  This makes it ideal
+# for integrating into a program that searches the space of possible
+# genes.
+
+# The rules of the game can be found under the projects section of the
+# course homepage on Canvas. Read the PacWarGuts.c file to understand how
+# the genetic code of 50 "bits" works.
+##################################################################################
+
+##################################################################################
+# To win this competition, you should start exploring the species
+# as soon as possible.
+#
+# For ideas on how to construct a species designer, read the chapters on
+# search algorithms, particularly local search algorithms, in the course textbook.
+##################################################################################
+
+##################################################################################
+# Explanation of menu options in the Pacwar simulator
+#
+# The  Exec menu allows you to Run, Step (advance the                                          
+# currently running simulation by one time step), Stop, Reset (which
+# kills whatever simulation was running or stopped), and Quit.
+#
+# The Genes menu allows you to Modify a List of genes                                         
+# (composed initially of species that is all 1s, all 2s, and all 3s, 
+# called ones, twos and threes respectively), Read Genes from                                   
+# a file (look at the file class.data for an example of the expected format) 
+# and Write Genes (that writes out all species in                                      
+# current list maintained by the simulator into a file in the required format
+#
+# The Display menu controls the display of the simulation.                                    
+# You have three choices: small, medium and large which sets the size
+# of the simulation display.
+#
+# The  Test and  Duel buttons allow you to switch  between the two modes of the
+# simulation:
+# Test Mode allows you to study the behavior of a single species in isolation,
+# e.g., its growth patterns and gross behaviour changes upon perturbing sets of
+# genes.
+# Duel Mode allows you to run a duel between two species (which may actually
+# both be  the same species); you can specify the candidate species by
+# selecting from  the pop-up menu that appears when you click on one or the
+# other's name.
+#
+# The Step button advances the current simulation by one round.
+##################################################################################

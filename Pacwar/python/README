@@ -1,0 +1,31 @@
+# This is an example PacWar python interface for comp440.
+#
+# Build tools for c++ should be installed on your computer. 
+# For example:
+#     - On a Mac, make sure you have xcode installed 
+#               (xcode-select install on the command prompt)
+#     - On windows, make sure you have Visual Studio installed
+#
+# Also note that this interface needs NumPy.
+#
+# To run the example code, 
+#     1. delete "_PyPacwar" library with the file extension
+#        .so (Mac/Linux) or .pyd (Windows) if exist
+#
+#     2. build the CPython extension with the following command:
+#		python setup.py build_ext --inplace
+#
+#        you can ignore "Using deprecated NumPy API" warning.
+#        this will create "_PyPacwar" library.
+#
+#     3. run the example code with the following command:
+# 		python PyPacwarExample.py
+#
+#
+# Official documentation for building CPython extensions is at
+# https://docs.python.org/3/extending/building.html
+# A nice tutorial is at
+# https://tutorialedge.net/python/python-c-extensions-tutorial/
+
+
+
