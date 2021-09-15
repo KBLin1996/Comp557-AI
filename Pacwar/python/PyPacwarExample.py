@@ -11,11 +11,11 @@ def main():
     threes = [3] * 50
     c1 = 100
     c2 = 100
-    rounds = 500
-    while(c1 > 0 or c3 > 0):
+    #rounds = 500
+    while(c1 > 0 or c3 > 0 or rounds_1 > 80 or rounds_2 > 80):
         var_ones = [1] * 50
         index_modified=[]
-        for i in range(0, 10):
+        for i in range(0, 30):
             index_modified.append(random.randint(0, 49))
         for i in index_modified:
             var_ones[i] = random.randint(0, 3)
@@ -23,8 +23,9 @@ def main():
         (rounds_2, c3, c2) = _PyPacwar.battle(threes, var_ones)
         print(c1, rounds_1, c3, rounds_2)
     print("Found!\n=> ", var_ones)
+    print(f"String: {''.join(map(str, var_ones))}")
     print("Example Python module in C for Pacwar")
-    print("all ones versus var all ones ...")
+    print("all ones versus var all ones and all threes...")
     #(rounds, c1, c2) = _PyPacwar.battle(ones, threes)
     print("Number of rounds:", rounds_1)
     print("Ones PAC-mites remaining:", c1)
