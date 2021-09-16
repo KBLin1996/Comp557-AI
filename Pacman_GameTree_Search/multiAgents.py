@@ -232,3 +232,73 @@ def betterEvaluationFunction(currentGameState):
 
 # Abbreviation
 better = betterEvaluationFunction
+
+
+class MinimaxAgent(MultiAgentSearchAgent):
+    """
+    Your minimax agent (question 2)
+    """
+
+    def getAction(self, gameState):
+        """
+        Returns the minimax action from the current gameState using self.depth
+        and self.evaluationFunction.
+
+        Here are some method calls that might be useful when implementing minimax.
+
+        gameState.getLegalActions(agentIndex):
+        Returns a list of legal actions for an agent
+        agentIndex=0 means Pacman, ghosts are >= 1
+
+        gameState.generateSuccessor(agentIndex, action):
+        Returns the successor game state after an agent takes an action
+
+        gameState.getNumAgents():
+        Returns the total number of agents in the game
+
+        gameState.isWin():
+        Returns whether or not the game state is a winning state
+
+        gameState.isLose():
+        Returns whether or not the game state is a losing state
+        """
+        return self.value(gameState, 0, self.depth)[1]
+        
+    def value(self, gameState, agentIndex, depth):
+        numA = gameState.getNumAgents()
+        
+        if depth == 0 or len(gameState.getLegalActions(agentIndex)) == 0:#gameState.isWin() or gameState.isLose():
+            return self.evaluationFunction(gameState),''
+        if (agentIndex%numA) == 0: # Agent's turn
+            return self.minValue(gameState, agentIndex, depth)
+        else:# Opponents' turn
+            return self.maxValue(gameState, agentIndex, depth)
+        
+    def maxValue(self, gameState, agentIndex, depth):
+        value = float('-inf')
+        bestA = None
+        for action in gameState.getLegalActions(agentIndex):
+            tempIndex = agentIndex + 1
+            tempDepth = depth
+            if tempIndex%gameState.getNumAgents() == 0:
+                tempDepth = depth - 1
+            temp = self.value(gameState.generateSuccessor(agentIndex, action), tempIndex, tempDepth)[0]
+            if value < temp:
+                value = temp
+                bestA = action
+        return value, bestA
+        
+    def minValue(self, gameState, agentIndex, depth):
+        value = float('inf')
+        bestA = None
+        for action in gameState.getLegalActions(agentIndex):
+            tempIndex = agentIndex + 1
+            tempDepth = depth
+            if tempIndex%gameState.getNumAgents() == 0:
+                tempDepth = depth - 1
+            temp = self.value(gameState.generateSuccessor(agentIndex, action), tempIndex, tempDepth)[0]
+            if value > temp:
+                value = temp
+                bestA = action
+        return value, bestA
+
