@@ -77,9 +77,17 @@ class ReflexAgent(Agent):
         value = 0
         newFood_coordinate = newFood.asList()
 
+        # If the position after we move contains a food => value += 1
         if newFood[newPos[0]][newPos[1]]:
             value += 1
 
+        # If the position after we move contains a ghost => return a value that substracts 9999
+        for ghost_states in newGhostStates:
+            if util.manhattanDistance(newPos, ghost_states.getPosition()) < 1:
+                value -= 9999
+                return value
+
+        # Accumulate the estimate value that we eat all food dots in minimum manhattanDistance()
         while len(newFood_coordinate) != 0:
             min_distance = util.manhattanDistance(newPos, newFood_coordinate[0])
             min_coordinate = newFood_coordinate[0]
@@ -90,11 +98,6 @@ class ReflexAgent(Agent):
                     min_coordinate = coordinate
             newFood_coordinate.remove(min_coordinate)
             value += 1 / min_distance
-
-        for ghost_states in newGhostStates:
-            if util.manhattanDistance(newPos, ghost_states.getPosition()) < 1:
-                value -= 9999
-                return value
 
         value += successorGameState.getScore()
         return value
