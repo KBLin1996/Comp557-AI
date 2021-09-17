@@ -284,7 +284,50 @@ def betterEvaluationFunction(currentGameState):
     DESCRIPTION: <write something here so we know what you did>
     """
     "*** YOUR CODE HERE ***"
-    util.raiseNotDefined()
+    flag = False
+    value = 0
+    # weight = [food_weight, power_food_weight, score_weight, food_left_weight]
+    weight = [20, 1, 200, -100]
+
+    # Get information on currentGameState (agents' position, capsules' position and food coordinate)
+    pacman_pos = currentGameState.getPacmanPosition()
+    ghosts_pos = currentGameState.getGhostPositions()
+    capsule_pos = currentGameState.getCapsules()
+    food_coordinate = currentGameState.getFood().asList()
+
+    # If the ghosts are near us => adjust the weight of finding power food and normal food finding
+    for ghost_pos in ghosts_pos:
+        if util.manhattanDistance(pacman_pos, ghost_pos) < 2:
+            flag = 1
+
+    # Determine the food finding value (find the closest food distance)
+    if flag:
+        min_distance = util.manhattanDistance(pacman_pos, food_coordinate[0])
+        for coordinate in food_coordinate:
+            cur_distance = util.manhattanDistance(pacman_pos, coordinate)
+            if cur_distance < min_distance:
+                min_distance = cur_distance
+    else:
+        min_distance = 10000
+    food_value = (1 / min_distance) * weight[0] + len(food_coordinate) * weight[3]
+
+    # Determine the capsule value
+    if len(capsule_pos) == 0:
+        capsule_value = 0
+    else:
+        # Find the closest capsule distance
+        min_distance = util.manhattanDistance(pacman_pos, capsule_pos[0])
+        for coordinate in capsule_pos:
+            cur_distance = util.manhattanDistance(pacman_pos, coordinate)
+            if cur_distance < min_distance:
+                min_distance = cur_distance
+        capsule_value = (1 / min_distance) * weight[1]
+
+    # Determine the gamescore value
+    game_value = currentGameState.getScore() * weight[2]
+
+    value = food_value + capsule_value + game_value
+    return value
 
 # Abbreviation
 better = betterEvaluationFunction
