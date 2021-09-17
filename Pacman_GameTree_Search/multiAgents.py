@@ -178,7 +178,7 @@ class AlphaBetaAgent(MultiAgentSearchAgent):
     """
     Your minimax agent with alpha-beta pruning (question 3)
     """
-    def getAction(self, game_state):
+    def getAction(self, gameState):
         """
           Returns the minimax action using self.depth and self.evaluationFunction
         """
@@ -203,7 +203,7 @@ class AlphaBetaAgent(MultiAgentSearchAgent):
         numA = gameState.getNumAgents()
         for action in gameState.getLegalActions(agentIndex):
             curD = depth if (agentIndex+1) % numA else depth-1
-            curV = self.value(gameState.generateSuccessor(agentIndex, action), (agentIndex+1)%numA, curD)[0]
+            curV = self.value(gameState.generateSuccessor(agentIndex, action), (agentIndex+1)%numA, curD, alpha, beta)[0]
             if curV > value:
                 value = curV
                 bestA = action
@@ -218,7 +218,7 @@ class AlphaBetaAgent(MultiAgentSearchAgent):
         numA = gameState.getNumAgents()
         for action in gameState.getLegalActions(agentIndex):
             curD = depth if (agentIndex+1) % numA else depth-1
-            curV = self.value(gameState.generateSuccessor(agentIndex, action), (agentIndex+1)%numA, curD)[0]
+            curV = self.value(gameState.generateSuccessor(agentIndex, action), (agentIndex+1)%numA, curD, alpha, beta)[0]
             if curV < value:
                 value = curV
                 bestA = action
