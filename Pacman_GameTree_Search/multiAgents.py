@@ -137,6 +137,28 @@ class MinimaxAgent(MultiAgentSearchAgent):
     Your minimax agent (question 2)
     """
     def getAction(self, gameState):
+    """
+        Returns the minimax action from the current gameState using self.depth
+        and self.evaluationFunction.
+
+        Here are some method calls that might be useful when implementing minimax.
+
+        gameState.getLegalActions(agentIndex):
+        Returns a list of legal actions for an agent
+        agentIndex=0 means Pacman, ghosts are >= 1
+
+        gameState.generateSuccessor(agentIndex, action):
+        Returns the successor game state after an agent takes an action
+
+        gameState.getNumAgents():
+        Returns the total number of agents in the game
+
+        gameState.isWin():
+        Returns whether or not the game state is a winning state
+
+        gameState.isLose():
+        Returns whether or not the game state is a losing state
+     """
         agentIndex = 0
         depth = self.depth
         value, action = self.value(gameState, agentIndex, depth)
@@ -174,62 +196,6 @@ class MinimaxAgent(MultiAgentSearchAgent):
                 value = curV
                 bestA = action
         return value, bestA
-    
-    def getAction(self, gameState):
-        """
-        Returns the minimax action from the current gameState using self.depth
-        and self.evaluationFunction.
-
-        Here are some method calls that might be useful when implementing minimax.
-
-        gameState.getLegalActions(agentIndex):
-        Returns a list of legal actions for an agent
-        agentIndex=0 means Pacman, ghosts are >= 1
-
-        gameState.generateSuccessor(agentIndex, action):
-        Returns the successor game state after an agent takes an action
-
-        gameState.getNumAgents():
-        Returns the total number of agents in the game
-
-        gameState.isWin():
-        Returns whether or not the game state is a winning state
-
-        gameState.isLose():
-        Returns whether or not the game state is a losing state
-        """
-        "*** YOUR CODE HERE ***"
-        maxV = float('-inf')
-        bestAction = None
-        agentIndex = 0
-        depth = self.depth
-        for action in gameState.getLegalActions(agentIndex):
-            curS = gameState.generateSuccessor(agentIndex, action)
-            curV = self.value(curS, agentIndex, depth)
-            if curV > maxV:
-                maxV = curV
-                bestAction = action
-        return bestAction
-        
-    def value(self, gameState, agentIndex, depth):
-        if depth == 0 or (len(gameState.getLegalActions(agentIndex)) == 0):#gameState.isWin() or gameState.isLose():
-            return self.evaluationFunction(gameState)
-        if agentIndex%2 == 0: # Agent's turn
-            return self.minValue(gameState, agentIndex, depth)
-        else:# Opponents' turn
-            return self.maxValue(gameState, agentIndex, depth)
-        
-    def maxValue(self, gameState, agentIndex, depth):
-        value = float('-inf')
-        for action in gameState.getLegalActions(agentIndex):
-            value = max(value, self.value(gameState.generateSuccessor(agentIndex, action), agentIndex+1, depth-1))
-        return value
-        
-    def minValue(self, gameState, agentIndex, depth):
-        value = float('inf')
-        for action in gameState.getLegalActions(agentIndex):
-            value = min(value, self.value(gameState.generateSuccessor(agentIndex, action), agentIndex+1, depth-1))
-        return value
 
 class AlphaBetaAgent(MultiAgentSearchAgent):
     """
