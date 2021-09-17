@@ -299,6 +299,7 @@ def betterEvaluationFunction(currentGameState):
     for ghost_pos in ghosts_pos:
         if util.manhattanDistance(pacman_pos, ghost_pos) < 2:
             flag = 1
+            weight[1] = 100
 
     # Determine the food finding value (find the closest food distance)
     if flag:
