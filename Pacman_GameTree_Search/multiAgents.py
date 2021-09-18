@@ -286,8 +286,8 @@ def betterEvaluationFunction(currentGameState):
     "*** YOUR CODE HERE ***"
     flag = False
     value = 0
-    # weight = [food_weight, power_food_weight, score_weight, food_left_weight]
-    weight = [20, 1, 200, -100]
+    # weight = [food_weight, len_power_food_weight, score_weight, food_left_weight]
+    weight = [10, -10, 200, -100]
 
     # Get information on currentGameState (agents' position, capsules' position and food coordinate)
     pacman_pos = currentGameState.getPacmanPosition()
@@ -299,10 +299,9 @@ def betterEvaluationFunction(currentGameState):
     for ghost_pos in ghosts_pos:
         if util.manhattanDistance(pacman_pos, ghost_pos) < 2:
             flag = 1
-            weight[1] = 100
 
     # Determine the food finding value (find the closest food distance)
-    if flag:
+    if not flag:
         min_distance = util.manhattanDistance(pacman_pos, food_coordinate[0])
         for coordinate in food_coordinate:
             cur_distance = util.manhattanDistance(pacman_pos, coordinate)
@@ -313,16 +312,7 @@ def betterEvaluationFunction(currentGameState):
     food_value = (1 / min_distance) * weight[0] + len(food_coordinate) * weight[3]
 
     # Determine the capsule value
-    if len(capsule_pos) == 0:
-        capsule_value = 0
-    else:
-        # Find the closest capsule distance
-        min_distance = util.manhattanDistance(pacman_pos, capsule_pos[0])
-        for coordinate in capsule_pos:
-            cur_distance = util.manhattanDistance(pacman_pos, coordinate)
-            if cur_distance < min_distance:
-                min_distance = cur_distance
-        capsule_value = (1 / min_distance) * weight[1]
+    capsule_value = len(capsule_pos) * weight[1]
 
     # Determine the gamescore value
     game_value = currentGameState.getScore() * weight[2]
