@@ -68,10 +68,10 @@ class TimeoutFunction:
         raise TimeoutFunctionException()
 
     def __call__(self, *args):
-        old = signal.signal(signal.SIGALRM, self.handle_maxSeconds)
-        signal.alarm(self.maxSeconds + 1)
+        #old = signal.signal(signal.SIGALRM, self.handle_maxSeconds)
+        #signal.alarm(self.maxSeconds + 1)
         result = self.function(*args)
-        signal.alarm(0)
+        #signal.alarm(0)
         return result
 
 class Part:

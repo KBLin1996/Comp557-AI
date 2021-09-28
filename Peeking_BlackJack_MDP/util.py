@@ -32,8 +32,8 @@ class MDP:
                     if newState not in self.states:
                         self.states.add(newState)
                         queue.append(newState)
-        # print ("%d states" % len(self.states))
-        # print (self.states)
+        #print ("%d states" % len(self.states))
+        #print (self.states)
 
 ############################################################
 
