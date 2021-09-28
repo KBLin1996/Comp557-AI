@@ -33,15 +33,10 @@ def policyEvaluation(mdp, V, pi, epsilon=0.001):
     while True:
         val_changed = 0
         for state in mdp.states:
-            state_val = 0
-            all_movement_info = mdp.succAndProbReward(state, pi[state])
-            for newState, prob, reward in all_movement_info:
-                state_val += prob * (reward + mdp.discount() * V[newState])
-
+            state_val = computeQ(mdp, V, state, pi[state])
             val_changed = max(val_changed, abs(V[state] - state_val))
             V[state] = state_val
-        if val_changed < epsilon:
-            break
+        if val_changed < epsilon: break
     return V
     # END_YOUR_CODE
 
