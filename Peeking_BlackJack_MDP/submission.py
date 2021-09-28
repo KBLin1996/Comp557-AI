@@ -30,9 +30,6 @@ def policyEvaluation(mdp, V, pi, epsilon=0.001):
     dictionaries.
     """
     # BEGIN_YOUR_CODE (around 7 lines of code expected)
-    for state in mdp.states:
-        V[state] = 0
-
     while True:
         val_changed = 0
         for state in mdp.states:
