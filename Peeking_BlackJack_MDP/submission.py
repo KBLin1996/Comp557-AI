@@ -34,10 +34,10 @@ def policyEvaluation(mdp, V, pi, epsilon=0.001):
         V[state] = 0
     for state in mdp.states:
         all_movement_info = mdp.succAndProbReward(state, pi[state])
+        prev_val = V[state]
         for newState, prob, reward in all_movement_info:
             V[state] += prob * (reward + mdp.discount() * V[newState])
-            val_diff = abs(V[newState] - V[state])
-        if val_diff < epsilon:
+        if abs(V[state] - prev_val) < epsilon:
             break
     return V
     # END_YOUR_CODE
