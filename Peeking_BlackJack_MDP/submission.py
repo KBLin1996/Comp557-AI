@@ -30,16 +30,16 @@ def policyEvaluation(mdp, V, pi, epsilon=0.001):
     dictionaries.
     """
     # BEGIN_YOUR_CODE (around 7 lines of code expected)
-    mdp.computeStates()
-    for i in range(len(V)):
-        V[i] = 0
-    for i in range(len(V)):
+    for state in mdp.states:
+        V[state] = 0
+    for state in mdp.states:
         all_movement_info = mdp.succAndProbReward(state, pi[state])
         for newState, prob, reward in all_movement_info:
             V[state] += prob * (reward + mdp.discount() * V[newState])
             val_diff = abs(V[newState] - V[state])
         if val_diff < epsilon:
             break
+    return V
     # END_YOUR_CODE
 
 ############################################################

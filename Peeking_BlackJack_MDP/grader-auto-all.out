@@ -17,9 +17,17 @@ parts:
 - maxPoints: 15
   maxSeconds: 1
   messages:
-  - 'Exception thrown: <class ''TypeError''> -- ''NoneType'' object is not subscriptable'
-  - "  File \".\\grader.py\", line 48, in test1b\n    if not grader.requireIsLessThan(.001,\
-    \ abs(goldV[state] - V[state])):\n"
+  - Expected to be < 0.001000, but got 29.999913
+  - Expected to be < 0.001000, but got 29.062413
+  - Expected to be < 0.001000, but got 27.333897
+  - Expected to be < 0.001000, but got 24.937962
+  - Expected to be < 0.001000, but got 21.978892
+  - Expected to be < 0.001000, but got 18.544676
+  - Expected to be < 0.001000, but got 14.709557
+  - Expected to be < 0.001000, but got 10.536175
+  - Expected to be < 0.001000, but got 6.077384
+  - Expected to be < 0.001000, but got 1.377779
+  - Expected to be < 0.001000, but got 3.525012
   name: 4.1.2
   points: 0
   seconds: 0
