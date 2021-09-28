@@ -1,4 +1,4 @@
-import collections, util, math, random
+import collections, util, math, random, copy
 
 ############################################################
 # Problem 4.1.1
@@ -67,7 +67,18 @@ class PolicyIteration(util.MDPAlgorithm):
         mdp.computeStates()
         # compute |V| and |pi|, which should both be dicts
         # BEGIN_YOUR_CODE (around 8 lines of code expected)
-        raise Exception("Not implemented yet")
+        V = dict()
+        pi = dict()
+        for state in mdp.states:
+            V[state] = 0
+            pi[state] = 1
+
+        while True:
+            prev_pi = copy.deepcopy(pi)
+            V = policyEvaluation(mdp, V, pi, epsilon)
+            pi = computeOptimalPolicy(mdp, V)
+            if prev_pi == pi:
+                break
         # END_YOUR_CODE
         self.pi = pi
         self.V = V
