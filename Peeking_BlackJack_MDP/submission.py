@@ -90,7 +90,16 @@ class ValueIteration(util.MDPAlgorithm):
     def solve(self, mdp, epsilon=0.001):
         mdp.computeStates()
         # BEGIN_YOUR_CODE (around 10 lines of code expected)
-        raise Exception("Not implemented yet")
+        V = collections.defaultdict(float)
+        while True:
+            val_changed = 0
+            for state in mdp.states:
+                state_val = max([computeQ(mdp, V, state, action) for action in mdp.actions(state)])
+                val_changed = max(val_changed, abs(V[state] - state_val))
+                V[state] = state_val
+            if val_changed < epsilon:
+                break
+        pi = computeOptimalPolicy(mdp, V)
         # END_YOUR_CODE
         self.pi = pi
         self.V = V
