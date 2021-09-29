@@ -18,7 +18,7 @@ def computeQ(mdp, V, state, action):
     for newState, prob, reward in all_movement_info:
         action_val += prob * (reward + mdp.discount() * V[newState])
     return action_val
-    # END_YOUR_CODE
+# END_YOUR_CODE
 
 ############################################################
 # Problem 4.1.2
@@ -38,7 +38,7 @@ def policyEvaluation(mdp, V, pi, epsilon=0.001):
             V[state] = state_val
         if val_changed < epsilon: break
     return V
-    # END_YOUR_CODE
+# END_YOUR_CODE
 
 ############################################################
 # Problem 4.1.3
@@ -57,7 +57,7 @@ def computeOptimalPolicy(mdp, V):
             if max_val < computeQ(mdp, V, state, action):
                 pi[state] = action
     return pi
-    # END_YOUR_CODE
+# END_YOUR_CODE
 
 ############################################################
 # Problem 4.1.4
@@ -115,35 +115,35 @@ class CounterexampleMDP(util.MDP):
     def __init__(self):
         # BEGIN_YOUR_CODE (around 1 line of code expected)
         raise Exception("Not implemented yet")
-        # END_YOUR_CODE
+    # END_YOUR_CODE
 
     def startState(self):
         # BEGIN_YOUR_CODE (around 1 line of code expected)
         raise Exception("Not implemented yet")
-        # END_YOUR_CODE
+    # END_YOUR_CODE
 
     # Return set of actions possible from |state|.
     def actions(self, state):
         # BEGIN_YOUR_CODE (around 1 line of code expected)
         raise Exception("Not implemented yet")
-        # END_YOUR_CODE
+    # END_YOUR_CODE
 
     # Return a list of (newState, prob, reward) tuples corresponding to edges
     # coming out of |state|.
     def succAndProbReward(self, state, action):
         # BEGIN_YOUR_CODE (around 1 line of code expected)
         raise Exception("Not implemented yet")
-        # END_YOUR_CODE
+    # END_YOUR_CODE
 
     def discount(self):
         # BEGIN_YOUR_CODE (around 1 line of code expected)
         raise Exception("Not implemented yet")
-        # END_YOUR_CODE
+    # END_YOUR_CODE
 
 def counterexampleAlpha():
     # BEGIN_YOUR_CODE (around 1 line of code expected)
     raise Exception("Not implemented yet")
-    # END_YOUR_CODE
+# END_YOUR_CODE
 
 ############################################################
 # Problem 4.2.1
@@ -190,7 +190,55 @@ class BlackjackMDP(util.MDP):
     #   don't include that state in the list returned by succAndProbReward.
     def succAndProbReward(self, state, action):
         # BEGIN_YOUR_CODE (around 50 lines of code expected)
-        raise Exception("Not implemented yet")
+        result=[]
+        totalCardValueInHand,nextCardIndexIfPeeked,deckCardCounts=state
+        if deckCardCounts is None:
+            return []
+        elif action=='Quit' or sum(deckCardCounts)==0:
+            nextState=(0,None,None)
+            nextReward=totalCardValueInHand
+            if totalCardValueInHand>self.threshold:
+                nextReward=0
+            result.append((nextState,1.0,nextReward))
+        elif action=='Take':
+            if nextCardIndexIfPeeked is not None:
+                deckCardCountsList=list(deckCardCounts)
+                deckCardCountsList[nextCardIndexIfPeeked]-=1
+                newValueInHand=self.cardValues[nextCardIndexIfPeeked]+totalCardValueInHand
+                if newValueInHand > self.threshold:
+                    nextState=(newValueInHand,None,None)
+                elif sum(deckCardCountsList)==0:
+                    nextState=(newValueInHand,None,None)
+                    nextReward=newValueInHand
+                else:
+                    nextState=(newValueInHand,None,tuple(deckCardCountsList))
+                result.append((nextState,1.0,0))
+            else:
+                for index,item in enumerate(deckCardCounts):
+                    if item>0:
+                        deckCardCountsList=list(deckCardCounts)
+                        nextProb=float(item)/sum(deckCardCounts)
+                        deckCardCountsList[index]-=1
+                        newValueInHand=self.cardValues[index]+totalCardValueInHand
+                        nextReward=0
+                        if newValueInHand>self.threshold:
+                            nextState=(newValueInHand,None,None)
+                        elif sum(deckCardCountsList)==0:
+                            nextState=(newValueInHand,None,None)
+                            nextReward=newValueInHand
+                        else:
+                            nextState=(newValueInHand,None,tuple(deckCardCountsList))
+                        result.append((nextState,nextProb,nextReward))
+        elif action=='Peek':
+            if nextCardIndexIfPeeked is not None:
+                return []
+            for index,item in enumerate(deckCardCounts):
+                if item>0:
+                    nextProb=float(item)/sum(deckCardCounts)
+                    nextState=(totalCardValueInHand,index,deckCardCounts)
+                    nextReward=-self.peekCost
+                    result.append((nextState,nextProb,nextReward))
+        return result
         # END_YOUR_CODE
 
     def discount(self):
@@ -207,4 +255,3 @@ def peekingMDP():
     # BEGIN_YOUR_CODE (around 2 lines of code expected)
     raise Exception("Not implemented yet")
     # END_YOUR_CODE
-

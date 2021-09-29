@@ -34,28 +34,15 @@ parts:
   seconds: 0
 - maxPoints: 10
   maxSeconds: 1
-  messages:
-  - 'Exception thrown: <class ''Exception''> -- Not implemented yet'
-  - "  File \".\\grader.py\", line 84, in test1e\n    testIteration(submission.ValueIteration())\n"
-  - "  File \".\\grader.py\", line 72, in testIteration\n    algorithm.solve(mdp,\
-    \ .0001)\n"
-  - "  File \"C:\\Users\\KB\\Desktop\\Rice\\Courses\\AI\\HW\\Comp557-Assignments\\\
-    Peeking_BlackJack_MDP\\submission.py\", line 93, in solve\n    raise Exception(\"\
-    Not implemented yet\")\n"
+  messages: []
   name: 4.1.5
-  points: 0
+  points: 10
   seconds: 0
 - maxPoints: 15
   maxSeconds: 1
-  messages:
-  - 'Exception thrown: <class ''Exception''> -- Not implemented yet'
-  - "  File \".\\grader.py\", line 116, in test2a\n    mdp.succAndProbReward(state,\
-    \ action)):\n"
-  - "  File \"C:\\Users\\KB\\Desktop\\Rice\\Courses\\AI\\HW\\Comp557-Assignments\\\
-    Peeking_BlackJack_MDP\\submission.py\", line 184, in succAndProbReward\n    raise\
-    \ Exception(\"Not implemented yet\")\n"
+  messages: []
   name: 4.2.1
-  points: 0
+  points: 15
   seconds: 0
 - maxPoints: 5
   maxSeconds: 1
@@ -63,9 +50,9 @@ parts:
   - 'Exception thrown: <class ''Exception''> -- Not implemented yet'
   - "  File \".\\grader.py\", line 121, in test2b\n    mdp = submission.peekingMDP()\n"
   - "  File \"C:\\Users\\KB\\Desktop\\Rice\\Courses\\AI\\HW\\Comp557-Assignments\\\
-    Peeking_BlackJack_MDP\\submission.py\", line 199, in peekingMDP\n    raise Exception(\"\
+    Peeking_BlackJack_MDP\\submission.py\", line 256, in peekingMDP\n    raise Exception(\"\
     Not implemented yet\")\n"
   name: 4.2.2
   points: 0
   seconds: 0
-totalPoints: 35
+totalPoints: 60
