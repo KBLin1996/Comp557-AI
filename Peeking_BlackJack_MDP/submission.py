@@ -119,31 +119,33 @@ class CounterexampleMDP(util.MDP):
 
     def startState(self):
         # BEGIN_YOUR_CODE (around 1 line of code expected)
-        raise Exception("Not implemented yet")
-    # END_YOUR_CODE
+        return 'S0'
+        # END_YOUR_CODE
 
     # Return set of actions possible from |state|.
     def actions(self, state):
         # BEGIN_YOUR_CODE (around 1 line of code expected)
-        raise Exception("Not implemented yet")
-    # END_YOUR_CODE
+        if state == 'S0': return ['HIT']
+        else: return ['STAND']
+        # END_YOUR_CODE
 
     # Return a list of (newState, prob, reward) tuples corresponding to edges
     # coming out of |state|.
     def succAndProbReward(self, state, action):
         # BEGIN_YOUR_CODE (around 1 line of code expected)
-        raise Exception("Not implemented yet")
-    # END_YOUR_CODE
+        if action == 'HIT': return [('S1', 0.2, 8),('S2', 0.8, 2)]
+        else: []
+        # END_YOUR_CODE
 
     def discount(self):
         # BEGIN_YOUR_CODE (around 1 line of code expected)
-        raise Exception("Not implemented yet")
-    # END_YOUR_CODE
+        return 1
+        # END_YOUR_CODE
 
 def counterexampleAlpha():
     # BEGIN_YOUR_CODE (around 1 line of code expected)
-    raise Exception("Not implemented yet")
-# END_YOUR_CODE
+    return 1
+    # END_YOUR_CODE
 
 ############################################################
 # Problem 4.2.1
