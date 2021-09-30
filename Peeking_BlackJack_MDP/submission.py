@@ -190,54 +190,60 @@ class BlackjackMDP(util.MDP):
     #   don't include that state in the list returned by succAndProbReward.
     def succAndProbReward(self, state, action):
         # BEGIN_YOUR_CODE (around 50 lines of code expected)
-        result=[]
-        totalCardValueInHand,nextCardIndexIfPeeked,deckCardCounts=state
+        result = []
+        totalCardValueInHand, nextCardIndexIfPeeked, deckCardCounts = state
+
         if deckCardCounts is None:
             return []
-        elif action=='Quit' or sum(deckCardCounts)==0:
-            nextState=(0,None,None)
-            nextReward=totalCardValueInHand
-            if totalCardValueInHand>self.threshold:
-                nextReward=0
-            result.append((nextState,1.0,nextReward))
-        elif action=='Take':
-            if nextCardIndexIfPeeked is not None:
-                deckCardCountsList=list(deckCardCounts)
-                deckCardCountsList[nextCardIndexIfPeeked]-=1
-                newValueInHand=self.cardValues[nextCardIndexIfPeeked]+totalCardValueInHand
-                if newValueInHand > self.threshold:
-                    nextState=(newValueInHand,None,None)
-                elif sum(deckCardCountsList)==0:
-                    nextState=(newValueInHand,None,None)
-                    nextReward=newValueInHand
-                else:
-                    nextState=(newValueInHand,None,tuple(deckCardCountsList))
-                result.append((nextState,1.0,0))
-            else:
-                for index,item in enumerate(deckCardCounts):
-                    if item>0:
-                        deckCardCountsList=list(deckCardCounts)
-                        nextProb=float(item)/sum(deckCardCounts)
-                        deckCardCountsList[index]-=1
-                        newValueInHand=self.cardValues[index]+totalCardValueInHand
-                        nextReward=0
-                        if newValueInHand>self.threshold:
-                            nextState=(newValueInHand,None,None)
-                        elif sum(deckCardCountsList)==0:
-                            nextState=(newValueInHand,None,None)
-                            nextReward=newValueInHand
-                        else:
-                            nextState=(newValueInHand,None,tuple(deckCardCountsList))
-                        result.append((nextState,nextProb,nextReward))
-        elif action=='Peek':
-            if nextCardIndexIfPeeked is not None:
+
+        elif action == "Peek":
+            if nextCardIndexIfPeeked != None:
                 return []
-            for index,item in enumerate(deckCardCounts):
-                if item>0:
-                    nextProb=float(item)/sum(deckCardCounts)
-                    nextState=(totalCardValueInHand,index,deckCardCounts)
-                    nextReward=-self.peekCost
-                    result.append((nextState,nextProb,nextReward))
+            else:
+                for idx, count in enumerate(deckCardCounts):
+                    if count > 0:
+                        prob = count / sum(deckCardCounts)
+                        nextState = (totalCardValueInHand, idx, deckCardCounts)
+                        result.append((nextState, prob, -self.peekCost))
+
+        elif action == "Take":
+            if nextCardIndexIfPeeked != None:
+                deckCardCountsList = list(deckCardCounts)
+                deckCardCountsList[nextCardIndexIfPeeked] -= 1
+                totalCardValueInHand += self.cardValues[nextCardIndexIfPeeked]
+
+                if totalCardValueInHand > self.threshold:
+                    nextState = (totalCardValueInHand, None, None)
+                    result.append((nextState, 1.0, 0))
+                elif sum(deckCardCounts) == 0:
+                    nextState = (totalCardValueInHand, None, None)
+                    result.append((nextState, 1.0, totalCardValueInHand))
+                else:
+                    nextState = (totalCardValueInHand, None, tuple(deckCardCountsList))
+                    result.append((nextState, 1.0, 0))
+            else:
+                for idx, count in enumerate(deckCardCounts):
+                    if count > 0:
+                        prevCardValueInHand = totalCardValueInHand
+                        prob = count / sum(deckCardCounts)
+                        prevCardValueInHand += self.cardValues[idx]
+                        deckCardCountsList = list(deckCardCounts)
+                        deckCardCountsList[idx] -= 1
+
+                        if prevCardValueInHand > self.threshold:
+                            nextState = (prevCardValueInHand, None, None)
+                            result.append((nextState, prob, 0))
+                        elif sum(deckCardCountsList) == 0:
+                            nextState = (prevCardValueInHand, None, None)
+                            result.append((nextState, 1.0, prevCardValueInHand))
+                        else:
+                            nextState = (prevCardValueInHand, None, tuple(deckCardCountsList))
+                            result.append((nextState, prob, 0))
+
+        elif action == "Quit":
+            nextState = (totalCardValueInHand, None, None)
+            result.append((nextState, 1, totalCardValueInHand))
+
         return result
         # END_YOUR_CODE
 

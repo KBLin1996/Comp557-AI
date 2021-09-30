@@ -50,7 +50,7 @@ parts:
   - 'Exception thrown: <class ''Exception''> -- Not implemented yet'
   - "  File \".\\grader.py\", line 121, in test2b\n    mdp = submission.peekingMDP()\n"
   - "  File \"C:\\Users\\KB\\Desktop\\Rice\\Courses\\AI\\HW\\Comp557-Assignments\\\
-    Peeking_BlackJack_MDP\\submission.py\", line 256, in peekingMDP\n    raise Exception(\"\
+    Peeking_BlackJack_MDP\\submission.py\", line 269, in peekingMDP\n    raise Exception(\"\
     Not implemented yet\")\n"
   name: 4.2.2
   points: 0
