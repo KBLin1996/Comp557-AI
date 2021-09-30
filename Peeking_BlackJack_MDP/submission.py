@@ -125,15 +125,15 @@ class CounterexampleMDP(util.MDP):
     # Return set of actions possible from |state|.
     def actions(self, state):
         # BEGIN_YOUR_CODE (around 1 line of code expected)
-        if state == 'S0': return ['DUAL']
-        else: return []
+        if state == 'S0': return ['HIT']
+        else: return ['STAND']
         # END_YOUR_CODE
 
     # Return a list of (newState, prob, reward) tuples corresponding to edges
     # coming out of |state|.
     def succAndProbReward(self, state, action):
         # BEGIN_YOUR_CODE (around 1 line of code expected)
-        if action == 'DUAL': return [('S1', 0.2, 8),('S2', 0.8, 2)]
+        if action == 'HIT': return [('S1', 0.2, 8),('S2', 0.8, 2)]
         else: []
         # END_YOUR_CODE
 
