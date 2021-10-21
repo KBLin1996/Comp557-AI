@@ -1,0 +1,1214 @@
+{
+  "COMP007": {
+    "cid": "COMP007",
+    "description": "Research conducted by a visiting student scholars. Department Permission Required. Repeatable for Credit. ",
+    "maxUnits": 0,
+    "minUnits": 0,
+    "name": "VISITING RESEARCH",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP105": {
+    "cid": "COMP105",
+    "description": "This course provides credit for students who have successfully completed approved examinations, such as Advanced Placement exams. This credit counts toward the total credit hours required for graduation. ",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "AP/OTH CREDIT COMPUTER SCIENCE",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP130": {
+    "cid": "COMP130",
+    "description": "An introduction to computation taught by solving real-world problems in architecture, statistics, linguistics, social networks, visual pattern recognition, and the simulation of complex systems in ecology. Technical topics include how to model computational artifacts operating in the world, how to design and implement algorithmic solutions in Python, and how to experimentally test and evaluate computational systems. ",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "ELEMENTS OF ALGORITHMS AND COMPUTATION",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP140": {
+    "cid": "COMP140",
+    "description": "An introduction to computational problem solving designed to give an overview of computer science using real-world problems across a broad range of disciplines. Students learn how to think about these problems and how to structure effective solutions to them using computation. No programming knowledge is required or expected; students learn how to implement their solutions in Python.  If you register for fully online section, you must have a webcam and you must take the exams in person. ",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "COMPUTATIONAL THINKING",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall",
+      "Spr"
+    ]
+  },
+  "COMP182": {
+    "cid": "COMP182",
+    "description": "Algorithms are the engines of a great majority of systems, natural and artificial alike. This course introduces algorithmic thinking as a discipline for reasoning about systems, taming their complexities, and elucidating their properties. Algorithmic techniques, along with their correctness and efficiency, will be taught through reasoning about systems of interactions, such as markets, that are ubiquitous in our highly connected world. ",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "ALGORITHMIC THINKING",
+    "prereqs": [
+      "COMP130"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Spr"
+    ]
+  },
+  "COMP215": {
+    "cid": "COMP215",
+    "description": "This course covers the principles of programming and program design. The course is organized around a number of individual programming assignments that fit together to complete a significant, real-world application. Each assignment emphasizes one or more of the basic principles of software design, including",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "INTRODUCTION TO PROGRAM DESIGN",
+    "prereqs": [
+      "COMP182"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP290": {
+    "cid": "COMP290",
+    "description": "Theoretical and experimental investigations under staff direction. Credit cannot be received for both COMP 290 and COMP 390. Instructor Permission Required.Equivalency",
+    "maxUnits": 3,
+    "minUnits": 1,
+    "name": "COMPUTER SCIENCE PROJECTS",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall",
+      "Spr"
+    ]
+  },
+  "COMP301": {
+    "cid": "COMP301",
+    "description": "Given their growing power in the twenty-first century, computer scientists have duties both to society and their own profession to wield that power wisely and responsibly. In this discussion-and reflection-oriented course students will apply fundamentals of moral philosophy and social responsibility to current issues in computer science. ",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "ETHICS AND ACCOUNTABILITY IN COMPUTER SCIENCE",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall",
+      "Spr"
+    ]
+  },
+  "COMP310": {
+    "cid": "COMP310",
+    "description": "Discover how state-of-the-art object-orient programming and design techniques can create globe-spanning software systems that are both flexible and scalable. Learn how software design patterns are used in multiple programming paradigms. Explore highly decoupled systems with dynamically configurable behaviors. Highly recommended for anyone interested in building large systems and software engineering.  Mutually Exclusive",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "ADVANCED OBJECT - ORIENTED PROGRAMMING AND DESIGN",
+    "prereqs": [
+      "COMP215"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall",
+      "Spr"
+    ]
+  },
+  "COMP311": {
+    "cid": "COMP311",
+    "description": "An introduction to concepts, principles, and approaches of functional programming. Functional programming is a style of programming where the key means of computation is the application of functions to arguments (which themselves might be functions). This style of programming has become increasingly popular in recent years because it offers important advantages in designing, maintaining, and reasoning about programs in many modern contexts such as web services, multicore programming, and cluster computing. Course work consists of a series of programming assignments in the Scala programming language and various library extensions such as Apache Spark. Graduate/Undergraduate Equivalency",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "FUNCTIONAL PROGRAMMING",
+    "prereqs": [
+      "COMP215"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP321": {
+    "cid": "COMP321",
+    "description": "This course introduces computer systems from the programmer&apos;s perspective. Topics include data representation, the compilation process, and system-level programming concepts such as interrupts and concurrency. Formerly COMP 221.  Mutually Exclusive",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "INTRODUCTION TO COMPUTER SYSTEMS",
+    "prereqs": [
+      "COMP215"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Spr"
+    ]
+  },
+  "COMP322": {
+    "cid": "COMP322",
+    "description": "Fundamentals of parallel programming",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "PRINCIPLES OF PARALLEL PROGRAMMING",
+    "prereqs": [
+      "COMP215"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Spr"
+    ]
+  },
+  "COMP326": {
+    "cid": "COMP326",
+    "description": "Study of gates, flip-flops, combinational and sequential switching circuits, registers, logical and arithmetic operations, introduction to the Verilog hardware description language. Cross-list",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "DIGITAL LOGIC DESIGN",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP330": {
+    "cid": "COMP330",
+    "description": "This course is an introduction to modern data science. Data science is the study of how to extract actionable, non-trivial knowledge from data. The proposed course will focus both on the software tools used by practitioners of modern data science, as well as the mathematical and statistical models that are employed in conjunction with such software tools. On the tools side, we will cover the basics of relational database systems, as well as modern systems for distributed computing based on MapReduce. On the models side, the course will cover standard supervised and unsupervised models for data analysis and pattern discovery. Graduate/Undergraduate Equivalency",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "TOOLS AND MODELS FOR DATA SCIENCE",
+    "prereqs": [
+      "COMP215"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP340": {
+    "cid": "COMP340",
+    "description": "The course is an intermediate level course in data science for students at the sophomore level with some experience in programming and background in mathematics (calculus). The course teaches students to \u201cdo\u201d data science in Python using six modules to illustrate fundamental data science operations, data cleaning, model exploration, model formulation, model visualization, model communication.  Recommended Prerequisite(s)",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "STATISTICAL MODELS AND ALGORITHMS FOR DATA SCIENCE",
+    "prereqs": [
+      "COMP140"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP347": {
+    "cid": "COMP347",
+    "description": "We will review, critique, and discuss computational methods and approaches for microbial forensics and infectious disease monitoring in the genomics era. The seminar will be divided into topic-specific sessions, focusing on emerging research trends and open challenges in the field. Graduate/Undergraduate Equivalency",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "COMPUTATIONAL GENOMICS FOR MICROBIAL FORENSICS",
+    "prereqs": [
+      "COMP182"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Spr"
+    ]
+  },
+  "COMP360": {
+    "cid": "COMP360",
+    "description": "2D graphics techniques including fast line and curve drawing and polygon filling.  3D graphics problems including representation of solids, shading, and hidden surface elimination.  Fractals, graphics standards. Graduate/Undergraduate Equivalency",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "COMPUTER GRAPHICS",
+    "prereqs": [
+      "COMP321",
+      "COMP182"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Spr"
+    ]
+  },
+  "COMP382": {
+    "cid": "COMP382",
+    "description": "Writing algorithms is fun, but how are you sure that the algorithm you wrote is flawless? Are there computing tasks for which it is impossible to produce an efficient algorithm, or, for that matter, any algorithm? To answer these questions, you have to learn to perform mathematical reasoning about algorithmic problems and solutions COMP 382 is an introduction to such reasoning techniques. Topics covered would include elementary logic, analysis of the correctness and efficiency of algorithms, and formal computational models like finite automata and Turning machines. On the way, you are also going to learn some new algorithm design techniques. ",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "REASONING ABOUT ALGORITHMS",
+    "prereqs": [
+      "COMP182"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP390": {
+    "cid": "COMP390",
+    "description": "Theoretical and experimental investigations under staff direction. Credit cannot be received for both COMP 290 and COMP 390. Instructor Permission Required.Equivalency",
+    "maxUnits": 3,
+    "minUnits": 1,
+    "name": "COMPUTER SCIENCE PROJECTS",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall",
+      "Spr"
+    ]
+  },
+  "COMP403": {
+    "cid": "COMP403",
+    "description": "Our reliance on software of all forms is increasing by the day. As a result, it is more important than ever to ensure that programs function correctly and cannot be exploited by hostile adversaries. The field of formal methods takes on this challenge, developing algorithms and programming methodologies that can be used to formally reason about what happens when software executes on arbitrary inputs, often without actually executing the program. Such reasoning can be used, for example, to identify subtle bugs and vulnerabilities in programs, or to give mathematical proofs of program correctness. This is a hands-on introduction to the field of formal methods. In this class, you will learn the theoretical foundations of these systems; you will also implement a series of systems that can be used to reason about the correctness of C programs. Graduate/Undergraduate Equivalency",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "REASONING AND SOFTWARE",
+    "prereqs": [
+      "COMP382",
+      "COMP215"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Spr"
+    ]
+  },
+  "COMP408": {
+    "cid": "COMP408",
+    "description": "The course will explore the mathematical underpinnings of reliable software. The students will learn how to use proof assistants to construct software along with a machine-checkable proof of its correctness. Basic concepts of logic, functional programming, static type systems and deductive verification will be covered. Graduate/Undergraduate Equivalency",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "VERIFIED PROGRAMMING",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Spr"
+    ]
+  },
+  "COMP409": {
+    "cid": "COMP409",
+    "description": "Logic has been called \"the calculus of computer science\". The argument is that logic plays a fundamental role in computer science, similar to that played by calculus in the physical sciences and traditional engineering disciplines. Indeed, logic plays an important role in areas of Computer Science as disparate as artificial intelligence (automated reasoning), architecture (logic gates), software engineering (specification and verification), programming languages (semantics, logic programming), databases (relational algebra and SQL), algorithms (complexity and expressiveness), and theory of computation (general notions of computability). Graduate/Undergraduate Equivalency",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "ADVANCED LOGIC IN COMPUTER SCIENCE",
+    "prereqs": [
+      "COMP215",
+      "COMP182"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP410": {
+    "cid": "COMP410",
+    "description": "COMP 410 is a pure discovery-based learning course designed to give students real-life, hands-on training in a wide variety of software engineering issues that arise in creating large-scale, state-of-the-art software systems. The class forms a small software development \"company\" that works to deliver a product to a customer.  The topics encountered include and are not limited to, dealing with new technologies (e.g. C#, .NET, distributed computing), advanced object-oriented programming and design, interacting with customers, problem specification and tasking, individual and group communications, human resource management, group leadership, testing, integration and documentation.  Traditional development cycle methodologies will be compared to recent, \"agile\" techniques. Graduate/Undergraduate Equivalency",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "SOFTWARE ENGINEERING METHODOLOGY",
+    "prereqs": [
+      "COMP310"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Spr"
+    ]
+  },
+  "COMP411": {
+    "cid": "COMP411",
+    "description": "The design, definition and abstract implementation of programming languages including methods for precisely specifying syntax and semantics. Graduate/Undergraduate Equivalency",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "PRINCIPLES OF PROGRAMMING LANGUAGES",
+    "prereqs": [
+      "COMP215"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Spr"
+    ]
+  },
+  "COMP412": {
+    "cid": "COMP412",
+    "description": "Topics in the design of programming language translators, including parsing, run-time storage management, error recovery, code generation and optimization. Graduate/Undergraduate Equivalency",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "COMPILER CONSTRUCTION FOR UNDERGRADUATE STUDENTS",
+    "prereqs": [
+      "COMP215",
+      "COMP321"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP413": {
+    "cid": "COMP413",
+    "description": "This course focuses on modern principles for the construction of distributed programs, with an emphasis on design patterns, modern programming tools, and distributed object systems.  The material will be applied in a substantial software design/construction project. ",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "DISTRIBUTED PROGRAM CONSTRUCTION",
+    "prereqs": [
+      "COMP310"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP414": {
+    "cid": "COMP414",
+    "description": "The main focus of the course will be on smooth optimization techniques, with applications in machine learning and artificial intelligence. The course will introduce the basics of algorithms on continuous optimization, starting from the classical gradient descent algorithm in convex optimization, towards more sophisticated approaches in non-convex scenarios. The course will explore the fundamental theory, algorithms, complexity and approximations in nonlinear optimization. Graduate/Undergraduate Equivalency",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "OPTIMIZATION",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP416": {
+    "cid": "COMP416",
+    "description": "Since the advent of Sanger Sequencing in 1977, computer scientists have been devising algorithms and software tools to interpret and analyze DNA sequences. The field of bioinformatics focuses on computational approaches to solving biological questions. This course will serve as an introduction to widely used algorithms in bioinformatics used for pattern searching, genome assembly, sequence alignment, and clustering of biological data. No prior knowledge of biology is assumed. The class involves several programming assignments. Graduate/Undergraduate Equivalency",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "GENOME-SCALE ALGORITHMS AND DATA STRUCTURES",
+    "prereqs": [
+      "COMP182"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP417": {
+    "cid": "COMP417",
+    "description": "In this seminar, we will investigate advanced topics in the design and implementation of operating systems,\nincluding",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "ADVANCED OPERATING SYSTEMS AND SECURITY",
+    "prereqs": [
+      "COMP421"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP421": {
+    "cid": "COMP421",
+    "description": "Introduction to the design, construction, and analysis of concurrent programs with an emphasis on operating systems, including filing systems, schedulers, and memory allocators. Specific attention is devoted to process synchronization and communication within concurrent programs. Cross-list",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "OPERATING SYSTEMS AND CONCURRENT PROGRAMMING",
+    "prereqs": [
+      "COMP215",
+      "COMP321"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Spr"
+    ]
+  },
+  "COMP425": {
+    "cid": "COMP425",
+    "description": "Evolution of key architecture concepts found in advanced uniprocessor systems. Fundamental and advanced pipelining techniques and associated issues for improving processor performance. Illustrated with RISC processors such as the ARM processor. Examine several metrics for processor performance, such as Amdahl\u2019s law. Key concepts of data and program memory systems found in modern systems with memory hierarchies and cashes. Perform experiments in cache performance analysis. Influence of technology trends, such as Moore\u2019s law, on processor implementation Approaches for exploiting instruction level parallelism, such as VLIW. Introduction to parallel and multicore architectures. Introduction to processor architectures targeted for imbedded applications. Cross-list",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "COMPUTER SYSTEMS ARCHITECTURE",
+    "prereqs": [
+      "COMP326"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP427": {
+    "cid": "COMP427",
+    "description": "This elective course covers a wide variety of topics in computer security, including hands-on experience w/breaking software & engineering software to be harder to break. For example, students will perform buffer overflow attacks & exploit web application vulnerabilities, while also learning how to defend against them. Graduate/Undergraduate Equivalency",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "INTRODUCTION TO COMPUTER SECURITY",
+    "prereqs": [
+      "COMP310",
+      "COMP321"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Spr"
+    ]
+  },
+  "COMP430": {
+    "cid": "COMP430",
+    "description": "Introduction to relational and other database systems, SQL programming, Database application programming, and Database design. Graduate/Undergraduate Equivalency",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "INTRODUCTION TO DATABASE SYSTEMS",
+    "prereqs": [
+      "COMP215",
+      "COMP182"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall",
+      "Spr"
+    ]
+  },
+  "COMP431": {
+    "cid": "COMP431",
+    "description": "In this project-based course, students create multi-user Web applications involving all aspects of application development from front-end and back-end programming to interfacing client-server communications technologies. Class time includes discussions of topics in Web development, structural frameworks, test driven development, and time for students to develop their Web applications. Graduate/Undergraduate Equivalency",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "WEB DEVELOPMENT",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall",
+      "Spr"
+    ]
+  },
+  "COMP436": {
+    "cid": "COMP436",
+    "description": "What is \u201ccloud computing?\u201d How do we build cloud-scale systems and components that are secure against malicious attacks, and scale to millions of users? Many of today\u2019s services run inside the cloud \u2013 a set of geographically distributed data centers running heterogeneous software stacks. Cloud systems must scale across tens of thousands of machines, support millions of concurrent requests, and they must do so with high security guarantees. This course will start with the fundamentals of cloud computing, introduce key techniques in building scalable and secure systems and expose students to state-of-the-art research advances as well as emerging security threats and defenses in today\u2019s cloud systems. Graduate/Undergraduate Equivalency",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "SECURE AND CLOUD COMPUTING",
+    "prereqs": [
+      "COMP327"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP440": {
+    "cid": "COMP440",
+    "description": "This is a foundational course in artificial intelligence, the discipline of designing intelligent agents. The course will cover the design and analysis of agents that do the right thing in the face of limited information and computational resources. The course revolves around two main questions",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "ARTIFICIAL INTELLIGENCE",
+    "prereqs": [
+      "COMP310"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP448": {
+    "cid": "COMP448",
+    "description": "Concrete mathematics is a blend of continuous and discrete mathematics. Major topics include sums, recurrences, integer functions, elementary number theory, binomial coefficients, generating functions, discrete probability and asymptotic methods. Cross-list",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "CONCRETE MATHEMATICS",
+    "prereqs": [
+      "COMP182"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP450": {
+    "cid": "COMP450",
+    "description": "Robots have fascinated people for generations. Today, robots are built for applications as diverse as exploring remote planets, de-mining war zones, cleaning toxic waste, assembling cars, inspecting pipes in industrial plants and mowing lawns. Robots are also interacting with humans in a variety of ways",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "ALGORITHMIC ROBOTICS",
+    "prereqs": [
+      "COMP321",
+      "COMP215"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP480": {
+    "cid": "COMP480",
+    "description": "This course will be ideal for someone wanting to build a strong foundation in the theory and practice of algorithms for processing Big-Data. We will discuss advanced data structures and algorithms going beyond deterministic setting and emphasize the role of randomness in getting significant, often exponential, improvements in computations and memory. Graduate/Undergraduate Equivalency",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "PROBABILISTIC ALGORITHMS AND DATA STRUCTURE",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Spr"
+    ]
+  },
+  "COMP481": {
+    "cid": "COMP481",
+    "description": "Finite automata, regular expressions, regular languages, pushdown automata, context-free languages, Turing machines, recursive languages, computability, and solvability. It is strongly recommended that students complete three semesters of Mathematics before enrolling in this course. Graduate/Undergraduate Equivalency",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "AUTOMATA, FORMAL LANGUAGES, AND COMPUTABILITY",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall",
+      "Spr"
+    ]
+  },
+  "COMP485": {
+    "cid": "COMP485",
+    "description": "This course will introduce basic principles of image acquisition, formation and processing of several medical imaging modalities such as X-Ray, CT, MRI, and US that are used to evaluate the human anatomy. The course also includes visits to a clinical site to gain experience with the various imaging modalities covered in class. Cross-list",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "FUNDAMENTALS OF MEDICAL IMAGING I",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP490": {
+    "cid": "COMP490",
+    "description": "Theoretical and experimental investigation under staff direction. Instructor Permission Required. Repeatable for Credit. ",
+    "maxUnits": 4,
+    "minUnits": 1,
+    "name": "COMPUTER SCIENCE PROJECTS",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall",
+      "Spr"
+    ]
+  },
+  "COMP491": {
+    "cid": "COMP491",
+    "description": "A combination of in-service teaching and a seminar.   Department Permission Required. Repeatable for Credit. ",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "COMPUTER SCIENCE TEACHING",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall",
+      "Spr"
+    ]
+  },
+  "COMP502": {
+    "cid": "COMP502",
+    "description": "Review of major neural machine learning (Artificial Neural Network) paradigms. Analytical discussion of supervised and unsupervised neural learning algorithms and their relation to information theoretical methods. Practical applications to data analysis such as pattern recognition, clustering, classification, function approximation/regression, non-linear PCA, projection pursuit, independent component analysis, with lots of examples from image and digital processings. Details are posted at www.ece.rice.edu/~erzsebet/ANNcourse.html. Cross-list",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "NEURAL MACHINE LEARNING I",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Spr"
+    ]
+  },
+  "COMP503": {
+    "cid": "COMP503",
+    "description": "Our reliance on software of all forms is increasing by the day. As a result, it is more important than ever to ensure that programs function correctly and cannot be exploited by hostile adversaries. The field of formal methods takes on this challenge, developing algorithms and programming methodologies that can be used to formally reason about what happens when software executes on arbitrary inputs, often without actually executing the program. Such reasoning can be used, for example, to identify subtle bugs and vulnerabilities in programs, or to give mathematical proofs of program correctness. This is a hands-on introduction to the field of formal methods. In this class, you will learn the theoretical foundations of these systems; you will also implement a series of systems that can be used to reason about the correctness of C programs. Graduate/Undergraduate Equivalency",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "REASONING AND SOFTWARE",
+    "prereqs": [
+      "COMP382",
+      "COMP215"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Spr"
+    ]
+  },
+  "COMP504": {
+    "cid": "COMP504",
+    "description": "Discover how stat-of-the-art object-orient programming and design techniques can create globe-spanning software systems that are both flexible and scalable. Learn how software design patterns are used in multiple programming paradigms. Explore highly decoupled systems with dynamically configurable behaviors. Highly recommended for anyone interested in building large systems and software engineering. Basic proficiency in Java is required. Students may not receive credit for both COMP 310/510 and COMP 404/504.  Mutually Exclusive",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "GRADUATE OBJECT-ORIENTED PROGRAMMING AND DESIGN",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP506": {
+    "cid": "COMP506",
+    "description": "Topics in the design of programming language translators, including parsing, run-time storage management, error recovery, code generation and optimization. Graduate/Undergraduate Equivalency",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "COMPILER CONSTRUCTION FOR GRADUATE STUDENTS",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Spr"
+    ]
+  },
+  "COMP509": {
+    "cid": "COMP509",
+    "description": "Logic has been called \"the calculus of computer science\". The argument is that logic plays a fundamental role in computer science, similar to that played by calculus in the physical sciences and traditional engineering disciplines. Indeed, logic plays an important role in areas of Computer Science as disparate as artificial intelligence (automated reasoning), architecture (logic gates), software engineering (specification and verification), programming languages (semantics, logic programming), databases (relational algebra and SQL), algorithms (complexity and expressiveness), and theory of computation (general notions of computability). Graduate/Undergraduate Equivalency",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "ADVANCED LOGIC IN COMPUTER SCIENCE",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP511": {
+    "cid": "COMP511",
+    "description": "The design, definition and abstract implementation of programming languages including methods for precisely specifying syntax and semantics. Graduate/Undergraduate Equivalency",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "PRINCIPLES OF PROGRAMMING LANGUAGES",
+    "prereqs": [
+      "COMP215"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Spr"
+    ]
+  },
+  "COMP513": {
+    "cid": "COMP513",
+    "description": "A modern computer is a system with enormous complexity in both software and hardware. The course presents the principles for managing such complexity using examples from modern computing systems. It covers emergent issues from system complexity such as energy efficiency, bug finding, and heterogeneous hardware. It also covers designing experiments and writing systems papers. The course consists of lectures, student presentation of classic papers, and a final project. Cross-list",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "COMPLEXITY IN MODERN SYSTEMS",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Spr"
+    ]
+  },
+  "COMP514": {
+    "cid": "COMP514",
+    "description": "The main focus of the course will be on smooth optimization techniques, with applications in machine learning and artificial intelligence. The course will introduce the basics of algorithms on continuous optimization, starting from the classical gradient descent algorithm in convex optimization, towards more sophisticated approaches in non-convex scenarios. The course will explore the fundamental theory, algorithms, complexity and approximations in nonlinear optimization. Graduate/Undergraduate Equivalency",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "OPTIMIZATION",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP517": {
+    "cid": "COMP517",
+    "description": "In this seminar, we will investigate advanced topics in the design and implementation of operating systems, including",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "ADVANCED OPERATING SYSTEMS AND SECURITY",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP519": {
+    "cid": "COMP519",
+    "description": "Since the advent of Sanger Sequencing in 1977, computer scientists have been devising algorithms and software tools to interpret and analyze DNA sequences. The field of bioinformatics focuses on computational approaches to solving biological questions. This course will serve as an introduction to widely used algorithms in bioinformatics used for pattern searching, genome assembly, sequence alignment, and clustering of biological data. No prior knowledge of biology is assumed. The class involves several programming assignments. Graduate/Undergraduate Equivalency",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "GENOME-SCALE ALGORITHMS AND DATA STRUCTURES",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP521": {
+    "cid": "COMP521",
+    "description": "Introduction to the design, construction, and analysis of concurrent programs with an emphasis on operating systems, including filing systems, schedulers, and memory allocators. Specific attention is devoted to process synchronization and communication within concurrent programs. Additional coursework required beyond the undergraduate course requirements. Cross-list",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "OPERATING SYSTEMS AND CONCURRENT PROGRAMMING",
+    "prereqs": [
+      "COMP215",
+      "COMP321"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Spr"
+    ]
+  },
+  "COMP522": {
+    "cid": "COMP522",
+    "description": "Multi-core microprocessors are becoming the norm. The course will focus on emerging multi-core processor architectures and challenges to using them effectively. Topics include multi-core microprocessors, memory hierarchy, synchronization, programming systems, scheduling, and transactional memory. ",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "MULTI-CORE COMPUTING",
+    "prereqs": [
+      "COMP321",
+      "COMP425"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Spr"
+    ]
+  },
+  "COMP526": {
+    "cid": "COMP526",
+    "description": "Design of high performance computer systems, including shared-memory and message-passing multiprocessors and vector systems. Hardware and software techniques to tolerate and reduce memory and communication latency. Case studies and performance simulation of high-performance systems. Cross-list",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "HIGH PERFORMANCE COMPUTER ARCHITECTURE",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Spr"
+    ]
+  },
+  "COMP529": {
+    "cid": "COMP529",
+    "description": "This course explores advanced solutions in computer networks that are driven by the need to go beyond the best-effort capabilities of the Internet. Topics include network fault tolerance, traffic engineering, scalable data center network architectures, network support for big data processing, network support for cloud computing, extensible network control via software defined networking, denial-of-service-attack defense mechanisms. Readings from original research papers. Also include design project and oral presentation components. This course assumes students already have a good understanding of the best-effort Internet. Cross-list",
+    "maxUnits": 4,
+    "minUnits": 1,
+    "name": "ADVANCED COMPUTER NETWORKS",
+    "prereqs": [
+      "COMP429"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP530": {
+    "cid": "COMP530",
+    "description": "This course covers database management system architecture, query processing and optimization, transaction processing, concurrent control and recover, storage, indexing structures and related topics. Students will build a database system from the ground up.  Graduate students who have not had an introductory database course should enroll for 4 credits",
+    "maxUnits": 4,
+    "minUnits": 3,
+    "name": "DATABASE SYSTEM IMPLEMENTATION",
+    "prereqs": [
+      "COMP321",
+      "COMP430"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Spr"
+    ]
+  },
+  "COMP531": {
+    "cid": "COMP531",
+    "description": "This project-based course explores Web application creation and design. Students are involved in the development of front-end and back-end systems while interfacting client-server communications technologies. Students will evaluate Web structural frameworks, Web development technologies, apply test driven development, and create multi-user Web applications. Graduate/Undergraduate Equivalency",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "WEB DEVELOPMENT AND DESIGN",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall",
+      "Spr"
+    ]
+  },
+  "COMP533": {
+    "cid": "COMP533",
+    "description": "Introduction to relational and other database systems, SQL programming, Database application programming, and Database design. Graduate/Undergraduate Equivalency",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "INTRODUCTION TO DATABASE SYSTEMS",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall",
+      "Spr"
+    ]
+  },
+  "COMP535": {
+    "cid": "COMP535",
+    "description": "Survey this radical concept of approximate (or inexact) computing with the goal of understanding both of the challenges and opportunities at all layers of the computing system ranging over programming languages, compilers and run-time, and architecture. ",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "APPROXIMATE COMPUTING SYSTEM FOR BIG DATA, SUPERCOMPUTING AND EMBEDDED SYSTEMS",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Spr"
+    ]
+  },
+  "COMP536": {
+    "cid": "COMP536",
+    "description": "What is \u201ccloud computing?\u201d How do we build cloud-scale systems and components that are secure against malicious attacks, and scale to millions of users? Many of today\u2019s services run inside the cloud \u2013 a set of geographically distributed data centers running heterogeneous software stacks. Cloud systems must scale across tens of thousands of machines, support millions of concurrent requests, and they must do so with high security guarantees. This course will start with the fundamentals of cloud computing, introduce key techniques in building scalable and secure systems and expose students to state-of-the-art research advances as well as emerging security threats and defenses in today\u2019s cloud systems. Cross-list",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "SECURE AND CLOUD COMPUTING",
+    "prereqs": [
+      "COMP327"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP539": {
+    "cid": "COMP539",
+    "description": "COMP 539 is a pure discovery-based learning course designed to give students real-life, hands-on training in a wide variety of software engineering issues that arise in creating large-scale, state-of-the-art software systems. The class forms a small software development \"company\" that works to deliver a product to a customer. The topics encountered include and are not limited to, dealing with new technologies (e.g. C#, .NET, distributed computing), advanced object-oriented programming and design, interacting with customers, problem specification and tasking, individual and group communications, human resource management, group leadership, testing, integration and documentation. Traditional development cycle methodologies will be compared to recent, \"agile\" techniques. Graduate/Undergraduate Equivalency",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "SOFTWARE ENGINEERING METHODOLOGY",
+    "prereqs": [
+      "COMP404"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Spr"
+    ]
+  },
+  "COMP540": {
+    "cid": "COMP540",
+    "description": "COMP 540 is about learning models from data. The course is designed to give students a foundational understanding of modern algorithms in learning and data mining, as well as hands-on experience with its applications in science and engineering. ",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "STATISTICAL MACHINE LEARNING",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Spr"
+    ]
+  },
+  "COMP541": {
+    "cid": "COMP541",
+    "description": "This elective course covers a wide variety of topics in computer security, including hands-on experience w/breaking software & engineering software to be harder to break. For example, students will perform buffer overflow attacks & exploit web application vulnerabilities, while also learning how to defend against them. Graduate/Undergraduate Equivalency",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "INTRODUCTION TO COMPUTER SECURITY",
+    "prereqs": [
+      "COMP310"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Spr"
+    ]
+  },
+  "COMP543": {
+    "cid": "COMP543",
+    "description": "This course is an introduction to modern data science. Data science is the study of how to extract actionable, non-trivial knowledge from data. The course will focus on the software tools used by practitioners of modern data science, the mathematical and statistical models that are employed in conjunction with such software tools and the applications of these tools and systems to different problems and domains. On the tools side, we will cover the basics of relational database systems, as well as modern systems for manipulating large data sets such as Hadoop MapReduce, Apache Spark, and Google\u2019s TensorFlow. On the model side, the course will cover standard supervised and unsupervised models for data analysis and pattern discovery. Mathematical sophistication (calculus, statistics) and programming skills that would be acquired in an undergraduate computer science program are expected. Most programming will be in Python and SQL. (SQL is covered in the course) with some Java. Graduate/Undergraduate Equivalency",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "GRADUATE TOOLS AND MODELS - DATA SCIENCE",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP544": {
+    "cid": "COMP544",
+    "description": "An introduction to concepts, principles, and approaches of functional programming. Functional programming is a style of programming where the key means of computation is the application of functions to arguments (which themselves might be functions). This style of programming has become increasingly popular in recent years because it offers important advantages in designing, maintaining, and reasoning about programs in many modern contexts such as web services, multicore programming, and cluster computing. Course work consists of a series of programming assignments in the Scala programming language and various library extensions such as Apache Spark. Graduate/Undergraduate Equivalency",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "FUNCTIONAL PROGRAMMING",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP545": {
+    "cid": "COMP545",
+    "description": "COMP 545 is a graduate-level course on optimization techniques and algorithms, as these are used in modern ML/AI/SP tasks. During this course, we will learn and study the above topics (both in depth and breadth). The course i) will focus on different objective classes (convex vs. non-convex objectives, with constraints or not, etc.), ii) will cover different optimization strategies within each class, iii) will study algorithmic choices based on computational resources (e.g., use of low-dimensional structures (when/why), asynchronous vs. synchronous algorithms, distributed algorithms, etc.) and iv) lastly, will study schemes that handle some specific, but well-spread optimization constraints (sparsity, low-rankness).The main objective of the course is to highlight optimization as a vital part of contemporary research in ML/AI/SP, and draw the attention of students to open-questions in related topics. In particular, the aim for students is to i) learn how to distinguish differences in research papers of related fields, ii) understand the connection between them and how researchers advance each area, and iii) be able to consider possible extensions of these works, as part of the final (open-ended) project of the course.  Repeatable for Credit. ",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "ADVANCED TOPICS IN OPTIMIZATION",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Spr"
+    ]
+  },
+  "COMP547": {
+    "cid": "COMP547",
+    "description": "We will review, critique, and discuss computational methods and approaches for microbial forensics and infectious disease monitoring in the genomics era. The seminar will be divided into topic-specific sessions, focusing on emerging research trends and open challenges in the field. Graduate/Undergraduate Equivalency",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "COMPUTATIONAL GENOMICS FOR MICROBIAL FORENSICS",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Spr"
+    ]
+  },
+  "COMP548": {
+    "cid": "COMP548",
+    "description": "The course will explore the mathematical underpinnings of reliable software. The students will learn how to use proof assistants to construct software along with a machine-checkable proof of its correctness. Basic concepts of logic, functional programming, static type systems and deductive verification will be covered.\n Graduate/Undergraduate Equivalency",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "VERIFIED PROGRAMMING",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Spr"
+    ]
+  },
+  "COMP550": {
+    "cid": "COMP550",
+    "description": "Robots have fascinated people for generations. Today, robots are built for applications as diverse as exploring remote planets, de-mining war zones, cleaning toxic waste, assembling cars, inspecting pipes in industrial plants and mowing lawns. Robots are also interacting with humans in a variety of ways",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "ALGORITHMIC ROBOTICS",
+    "prereqs": [
+      "COMP321",
+      "COMP215"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP554": {
+    "cid": "COMP554",
+    "description": "Evolution of key architecture concepts found in advanced uniprocessor systems. Fundamental and advanced pipelining techniques and associated issues for improving processor performance. Illustrated with RISC processors such as the ARM processor. Examine several metrics for processor performance, such as Amdahl\u2019s law. Key concepts of data and program memory systems found in modern systems with memory hierarchies and cashes. Perform experiments in cache performance analysis. Influence of technology trends, such as Moore\u2019s law, on processor implementation Approaches for exploiting instruction level parallelism, such as VLIW. Introduction to parallel and multicore architectures. Introduction to processor architectures targeted for imbedded applications. Additional coursework required beyond the undergraduate course requirements. Cross-list",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "COMPUTER SYSTEMS ARCHITECTURE",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP557": {
+    "cid": "COMP557",
+    "description": "This is a foundational course in artificial intelligence, the discipline of designing intelligent agents. The course will cover the design and analysis of agents that do the right thing in the face of limited information and computational resources. The course revolves around two main questions",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "ARTIFICIAL INTELLIGENCE",
+    "prereqs": [
+      "COMP310"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP560": {
+    "cid": "COMP560",
+    "description": "A survey of core topics in Computer Graphics and Geometric Modeling, including fractals, ray tracing, hidden surface Algorithmic, Bezier, B-spline, blossoming techniques and subdivision procedures. Graduate/Undergraduate Equivalency",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "COMPUTER GRAPHICS AND GEOMETRIC MODELING",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Spr"
+    ]
+  },
+  "COMP571": {
+    "cid": "COMP571",
+    "description": "Pairwise and multiple sequence alignment, Markov chains and HMMs, Phylogenetic reconstruction, Haplotype inference, Computational models of RNA structure, Gene finding, Genome rearrangements, and comparative genomics. Cross-list",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "BIOINFORMATICS",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP576": {
+    "cid": "COMP576",
+    "description": "Deep Machine Learning has recently made many advances in difficult perceptual tasks, including object and phoneme recognition, and natural language processing. However, the field has a steep learning curve, both conceptually and practically. The point of this course is to engage students by jumping into the deep end, and building their own architectures and algorithms. Cross-list",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "A PRACTICAL INTRODUCTION TO DEEP MACHINE LEARNING",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP580": {
+    "cid": "COMP580",
+    "description": "This course will be ideal for someone wanting to build a strong foundation in the theory and practice of algorithms for processing Big-Data. We will discuss advanced data structures and algorithms going beyond deterministic setting and emphasize the role of randomness in getting significant, often exponential, improvements in computations and memory. Graduate/Undergraduate Equivalency",
+    "maxUnits": 4,
+    "minUnits": 4,
+    "name": "PROBABILISTIC ALGORITHMS AND DATA STRUCTURE",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Spr"
+    ]
+  },
+  "COMP581": {
+    "cid": "COMP581",
+    "description": "Finite automata, regular expressions, regular languages, pushdown automata, context-free languages, Turing machines, recursive languages, computability, and solvability. It is strongly recommended that students complete three semesters of Mathematics before enrolling in this course. Graduate/Undergraduate Equivalency",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "AUTOMATA, FORMAL LANGUAGES, AND COMPUTABILITY",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall",
+      "Spr"
+    ]
+  },
+  "COMP582": {
+    "cid": "COMP582",
+    "description": "Methods for designing and analyzing computer algorithms and data structures. The focus of this course will be on the theoretical and mathematical aspects of algorithms and data structures. Cross-list",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "GRADUATE DESIGN AND ANALYSIS OF ALGORITHMS",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP590": {
+    "cid": "COMP590",
+    "description": "Advanced theoretical and experimental investigations under staff direction. \nThe student must have a full-time internship to receive 4 credits for this course. Instructor Permission Required. Repeatable for Credit. ",
+    "maxUnits": 4,
+    "minUnits": 1,
+    "name": "COMPUTER SCIENCE PROJECTS",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall",
+      "Spr"
+    ]
+  },
+  "COMP591": {
+    "cid": "COMP591",
+    "description": "A combination of in-service teaching and a seminar. Instructor Permission Required. Repeatable for Credit. ",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "GRADUATE COMPUTER SCIENCE TEACHING",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP600": {
+    "cid": "COMP600",
+    "description": "The seminar course meets weekly to discuss current research results by graduate students in the Computer Science Department. Senior Ph.D. Students are expected to present their research results. This course is open ONLY to MS and Ph.D. Students. MCS students may NOT take this course for credit without the consent of the instructor.  Repeatable for Credit. ",
+    "maxUnits": 1,
+    "minUnits": 1,
+    "name": "GRADUATE SEMINAR IN COMPUTER SCIENCE",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall",
+      "Spr"
+    ]
+  },
+  "COMP602": {
+    "cid": "COMP602",
+    "description": "Advanced topics in ANN theories, with a focus on learning high-dimensional complex manifolds with neural maps (Self-Organizing Maps, Learning Vector Quantizers and variants). Application to data mining, clustering, classification, dimension reduction, sparse representation. The course will be a mix of lectures and seminar discussions with active student participation, based on most recent research publications. Students will have access to professional software environment to implement theories. Cross-list",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "NEURAL MACHINE LEARNING AND DATA MINING II",
+    "prereqs": [
+      "COMP502"
+    ],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP607": {
+    "cid": "COMP607",
+    "description": "Methods, tools and theories for the computer-aided verification of concurrent systems.  Repeatable for Credit. ",
+    "maxUnits": 1,
+    "minUnits": 1,
+    "name": "AUTOMATED PROGRAM VERIFICATION",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Spr"
+    ]
+  },
+  "COMP611": {
+    "cid": "COMP611",
+    "description": "This course will cover a selection of topics from the areas of programming languages and formal methods. all students will read classical and recent papers on the selected topics and give presentations on them. A student may elect to perform a semester-long project on a topics related to the content of the course and write a short report on their findings.  Repeatable for Credit. ",
+    "maxUnits": 3,
+    "minUnits": 1,
+    "name": "TOPICS IN PROGRAMMING LANGUAGES AND FORMAL METHODS",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP630": {
+    "cid": "COMP630",
+    "description": "This course is an introduction to relational and other (NoSQL) database systems, SQL programming, and database design. This course will teach students how to understand trade-offs in database design, to create well-designed databases, and to develop proficiency in effectively managing data in a database. The course is focused on developing skills as a database designer and power-user. It also includes discussions of database implementation details to enable students to understand underlying system functionality and how that impacts decisions a database designer makes. ",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "DATABASES",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP640": {
+    "cid": "COMP640",
+    "description": "A reading course covering the latest developments in statistical machine learning and pattern recognition.  Recommended Prerequisite(s)",
+    "maxUnits": 3,
+    "minUnits": 1,
+    "name": "GRADUATE SEMINAR IN MACHINE LEARNING",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP645": {
+    "cid": "COMP645",
+    "description": "We will learn about and discuss recent advances in various areas in computer systems, including topics on security, distributed systems, networking, operating systems, and databases. The seminar will be divided into several sections, with each section focusing on one research trend. In each class, students will read one classic paper on the topic, and present two recent papers that describe the stat of the art. Students can also team up and do a semester-long research project on any relevant topics. All students will need to make a final presentation at the end of the class on a potential project idea; for students that choose to do a semester-long project, they will also submit a six-page report on their project, in addition to giving a final presentation. Instructor Permission Required.Cross-list",
+    "maxUnits": 3,
+    "minUnits": 1,
+    "name": "ADVANCED TOPICS IN DISTRIBUTED SYSTEMS",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Spr"
+    ]
+  },
+  "COMP650": {
+    "cid": "COMP650",
+    "description": "Methods, tools and theories for reasoning about problems with physical constraints. The student may elect to perform a project to receive more than 1 credit hour. Instructor Permission Required. Repeatable for Credit. ",
+    "maxUnits": 3,
+    "minUnits": 1,
+    "name": "PHYSICAL COMPUTING",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Spr"
+    ]
+  },
+  "COMP682": {
+    "cid": "COMP682",
+    "description": "Algorithms are the recipes that underlie all computations executed by a computer. Designing new algorithms, proving their correctness, and analyzing their computational requirements are three foundational tasks in all areas of computer science. This course covers all these three aspects of algorithms. Topics covered include growth of functions, asymptotic notation and analysis, graphs and their properties, graph exploration, graph algorithms, greedy algorithms, divide-and-conquer algorithms, dynamic programming, NP-Completeness, and heuristic search algorithms. ",
+    "maxUnits": 3,
+    "minUnits": 3,
+    "name": "PRINCIPLES OF ALGORITHMS AND SOFTWARE AREA",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall"
+    ]
+  },
+  "COMP690": {
+    "cid": "COMP690",
+    "description": "\u00a0Repeatable for Credit.",
+    "maxUnits": 12,
+    "minUnits": 1,
+    "name": "RESEARCH AND THESIS",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall",
+      "Spr"
+    ]
+  },
+  "COMP800": {
+    "cid": "COMP800",
+    "description": "\u00a0Repeatable for Credit.",
+    "maxUnits": 15,
+    "minUnits": 1,
+    "name": "GRADUATE RESEARCH",
+    "prereqs": [],
+    "py/object": "__main__.Course",
+    "semesters": [
+      "Fall",
+      "Spr"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+# Unit limit per semester.
+minUnits 7
+maxUnits 9
+
+# These are the semesters that I need to fill. It is assumed that
+# the semesters are sorted in chronological order.
+register Spr2019
+register Fall2019
+
+
+# Courses I've already taken
+taken COMP140
+taken COMP182
+taken COMP215
+taken COMP310
+taken COMP321
+
+# Courses that I'm requesting
+request COMP411 in Spr2019
+request COMP412 
+request COMP582
+request COMP481
+request COMP430
+

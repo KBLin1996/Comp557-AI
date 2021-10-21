@@ -47,11 +47,7 @@ parts:
 - maxPoints: 5
   maxSeconds: 1
   messages:
-  - 'Exception thrown: <class ''Exception''> -- Not implemented yet'
-  - "  File \".\\grader.py\", line 121, in test2b\n    mdp = submission.peekingMDP()\n"
-  - "  File \"C:\\Users\\KB\\Desktop\\Rice\\Courses\\AI\\HW\\Comp557-Assignments\\\
-    Peeking_BlackJack_MDP\\submission.py\", line 269, in peekingMDP\n    raise Exception(\"\
-    Not implemented yet\")\n"
+  - Expected to be >= 0.100000, but got 0.000000
   name: 4.2.2
   points: 0
   seconds: 0

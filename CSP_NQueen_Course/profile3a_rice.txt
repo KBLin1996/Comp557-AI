@@ -1,0 +1,18 @@
+# Unit limit per semester. You can ignore this for the first
+# few questions in problem 3
+minUnits 1
+maxUnits 4
+
+# These are the semesters that I need to fill out.
+# It is assumed that the semesters are sorted in chronological order.
+register Fall2019
+# Courses I've already taken
+taken COMP140
+taken COMP182
+taken COMP321
+taken COMP215
+
+# Courses that I'm requesting
+request COMP310 in Fall2019
+
+
