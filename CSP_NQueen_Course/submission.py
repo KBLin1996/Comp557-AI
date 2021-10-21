@@ -17,7 +17,13 @@ def create_nqueens_csp(n = 8):
     """
     csp = util.CSP()
     # BEGIN_YOUR_CODE (around 7 lines of code expected)
-    raise Exception("Not implemented yet")
+    for i in range(n): csp.add_variable(i, [[i,j] for j in range(n)])
+    for i in range(n):
+        for j in range(n):
+            if i!=j:
+                csp.add_binary_potential(i, j, lambda x, y : x[1] != y[1])
+                csp.add_binary_potential(i, j, lambda x, y : x[1]-x[0] != y[1]-y[0])
+                csp.add_binary_potential(i, j, lambda x, y : x[1]+x[0] != y[1]+y[0])
     # END_YOUR_CODE
     return csp
 
