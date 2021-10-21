@@ -223,9 +223,8 @@ class BacktrackingSearch():
             mcvDom = float('inf')
             for var in range(len(assignment)):
                 if assignment[var] is None:
-                    tmpDom = self.domains[var]
                     varDom = 0
-                    for val in tmpDom:
+                    for val in self.domains[var]:
                         if self.get_delta_weight(assignment, var, val) != 0:
                             varDom += 1
                     if varDom < mcvDom:
@@ -258,7 +257,17 @@ class BacktrackingSearch():
             # constraints imposed on unassigned neighboring variables.
             # BEGIN_YOUR_CODE (around 12 lines of code expected)
             # Will update the domains! The unary constraint on var, val was already checked by backtrack before calling this method
-            raise Exception("Not implemented yet")
+            lcvDom = None
+            varDom = self.domains[var]
+            dictDom = {val:0 for val in varDom}
+            for val in varDom:
+                for var2, potential in self.csp.binaryPotentials[var].items():
+                    if assignment[var2] == None:
+                        for val2 in self.domains[var2]:
+                            if self.get_delta_weight(assignment, var2, val2) != 0 and potential[val][val2] != 0:
+                                dictDom[val] += 1
+            sortedDom = sorted(dictDom.items(), key=lambda x:x[1], reverse=True)
+            return [i[0] for i in sortedDom]
             # END_YOUR_CODE
    
     def arc_consistency_check(self, var):
