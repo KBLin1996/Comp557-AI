@@ -311,7 +311,23 @@ class BacktrackingSearch():
         """
         # Problem 3.1d
         # BEGIN_YOUR_CODE (around 15-20 lines of code expected)
-        raise Exception("Not implemented yet")
+        queue=[(nb,var) for nb in self.csp.binaryPotentials[var].keys()]
+        while queue:
+            vk, vj=queue.pop(0)
+            rmlist=[]
+            for val1 in self.domains[vk]:
+                change=False
+                for val2 in self.domains[vj]:
+                    if self.csp.binaryPotentials[vk][vj][val1][val2]>0:
+                        change=True
+                if not change:
+                    rmlist.append(val1)
+            if len(rmlist)>0:
+                for val in rmlist:
+                    self.domains[vk].remove(val)
+                for nbvk in [i for i in self.csp.binaryPotentials[vk].keys()]:
+                    if nbvk!=vk:
+                        queue.append((nbvk,vk))
         # END_YOUR_CODE
 
 ############################################################
