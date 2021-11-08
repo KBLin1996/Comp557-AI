@@ -1,0 +1,101 @@
+maxTotalPoints: 100
+messages: []
+mode: all
+parts:
+- maxPoints: 0
+  maxSeconds: 1000000
+  messages:
+  - 'Exception thrown: <class ''AttributeError''> -- module ''signal'' has no attribute
+    ''SIGALRM'''
+  name: writeupValid
+  points: 0
+  seconds: 0
+- maxPoints: 5
+  maxSeconds: 1000000
+  messages:
+  - 'Exception thrown: <class ''AttributeError''> -- module ''signal'' has no attribute
+    ''SIGALRM'''
+  name: 3.1a-0
+  points: 0
+  seconds: 0
+- maxPoints: 10
+  maxSeconds: 1000000
+  messages:
+  - 'Exception thrown: <class ''AttributeError''> -- module ''signal'' has no attribute
+    ''SIGALRM'''
+  name: 3.1b-0
+  points: 0
+  seconds: 0
+- maxPoints: 10
+  maxSeconds: 1000000
+  messages:
+  - 'Exception thrown: <class ''AttributeError''> -- module ''signal'' has no attribute
+    ''SIGALRM'''
+  name: 3.1c
+  points: 0
+  seconds: 0
+- maxPoints: 7
+  maxSeconds: 1000000
+  messages:
+  - 'Exception thrown: <class ''AttributeError''> -- module ''signal'' has no attribute
+    ''SIGALRM'''
+  name: 3.1d-0
+  points: 0
+  seconds: 0
+- maxPoints: 8
+  maxSeconds: 1000000
+  messages:
+  - 'Exception thrown: <class ''AttributeError''> -- module ''signal'' has no attribute
+    ''SIGALRM'''
+  name: 3.1d-1
+  points: 0
+  seconds: 0
+- maxPoints: 10
+  maxSeconds: 1000000
+  messages:
+  - 'Exception thrown: <class ''AttributeError''> -- module ''signal'' has no attribute
+    ''SIGALRM'''
+  name: 3.2b-0
+  points: 0
+  seconds: 0
+- maxPoints: 10
+  maxSeconds: 1000000
+  messages:
+  - 'Exception thrown: <class ''AttributeError''> -- module ''signal'' has no attribute
+    ''SIGALRM'''
+  name: 3.3a-0
+  points: 0
+  seconds: 0
+- maxPoints: 10
+  maxSeconds: 1000000
+  messages:
+  - 'Exception thrown: <class ''AttributeError''> -- module ''signal'' has no attribute
+    ''SIGALRM'''
+  name: 3.3b-0
+  points: 0
+  seconds: 0
+- maxPoints: 10
+  maxSeconds: 1000000
+  messages:
+  - 'Exception thrown: <class ''AttributeError''> -- module ''signal'' has no attribute
+    ''SIGALRM'''
+  name: 3.3c-0
+  points: 0
+  seconds: 0
+- maxPoints: 10
+  maxSeconds: 1000000
+  messages:
+  - 'Exception thrown: <class ''AttributeError''> -- module ''signal'' has no attribute
+    ''SIGALRM'''
+  name: 3.3d-0
+  points: 0
+  seconds: 0
+- maxPoints: 10
+  maxSeconds: 1000000
+  messages:
+  - 'Exception thrown: <class ''AttributeError''> -- module ''signal'' has no attribute
+    ''SIGALRM'''
+  name: profile.txt
+  points: 0
+  seconds: 0
+totalPoints: 0

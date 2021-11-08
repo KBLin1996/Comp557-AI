@@ -354,7 +354,25 @@ def get_sum_variable(csp, name, variables, maxSum):
     """
 
     # BEGIN_YOUR_CODE (around 12-15 lines of code expected)
-    raise Exception("Not implemented yet")
+    result=('sum',name,'aggregated')
+    if len(variables)==0:
+        csp.add_variable(result,[0])
+        return result
+    oldVar=None
+    for i,var in enumerate(variables):
+        A_i=('sum',name,i)
+        #A_0 is special case. theres no prev amount to check for
+        if i==0:
+            csp.add_variable(A_i,[(0,i) for i in range(maxSum+1)])
+            csp.add_binary_factor(A_i,variables[0],lambda x,y:x[1]==y)
+        else:
+            csp.add_variable(A_i,[(j,k) for j in range(maxSum+1) for k in range(maxSum+1)])
+            csp.add_binary_factor(A_i,oldVar,lambda x,y:x[0]==y[1])
+            csp.add_binary_factor(A_i,variables[i],lambda x,y:x[1]==(x[0]+y))
+        oldVar=A_i
+    csp.add_variable(result,range(maxSum+1))
+    csp.add_binary_factor(result,A_i,lambda x,y:x==y[1])
+    return result
     # END_YOUR_CODE
 
 ############################################################
