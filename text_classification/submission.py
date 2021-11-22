@@ -76,7 +76,11 @@ def extractUnigramFeatures(x):
     @return dict: feature vector representation of x.
     """
     # BEGIN_YOUR_CODE (around 6 lines of code expected)
-    raise NotImplementedError("TODO:")       
+    featureVec = Counter()
+    words = x.split()
+    for word in words:
+        featureVec[word] += 1
+    return featureVec
     # END_YOUR_CODE
 
 

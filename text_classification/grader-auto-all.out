@@ -1,0 +1,87 @@
+maxTotalPoints: 23
+messages: []
+mode: all
+parts:
+- maxPoints: 1
+  maxSeconds: 10
+  messages: []
+  name: 2.1.1a-0
+  points: 1
+  seconds: 0
+- maxPoints: 1
+  maxSeconds: 10
+  messages: []
+  name: 2.1.1a-1
+  points: 1
+  seconds: 0
+- maxPoints: 2
+  maxSeconds: 10
+  messages: []
+  name: 2.1.2a
+  points: 2
+  seconds: 0
+- maxPoints: 2
+  maxSeconds: 10
+  messages:
+  - 'Exception thrown: <class ''NotImplementedError''> -- TODO:'
+  - "  File \"grader.py\", line 70, in test1_2b\n    classifier.classifyWithLabel(\
+    \ \"The quick dog chased\"))\n"
+  - "  File \"C:\\Users\\KB\\Desktop\\Rice\\Courses\\AI\\HW\\Comp557-Assignments\\\
+    text_classification\\submission.py\", line 29, in classifyWithLabel\n    if self.classify(text)\
+    \ >= 0.:\n"
+  - "  File \"C:\\Users\\KB\\Desktop\\Rice\\Courses\\AI\\HW\\Comp557-Assignments\\\
+    text_classification\\submission.py\", line 104, in classify\n    raise NotImplementedError(\"\
+    TODO:\")\n"
+  name: 2.1.2b
+  points: 0
+  seconds: 0
+- maxPoints: 0
+  maxSeconds: 10
+  messages:
+  - 'Exception thrown: <class ''NotImplementedError''> -- TODO:'
+  - "  File \"grader.py\", line 83, in test1_3a_0\n    3)\n"
+  - "  File \"C:\\Users\\KB\\Desktop\\Rice\\Courses\\AI\\HW\\Comp557-Assignments\\\
+    text_classification\\submission.py\", line 118, in learnWeightsFromPerceptron\n\
+    \    raise NotImplementedError(\"TODO:\")\n"
+  name: 2.1.3a-0
+  points: 0
+  seconds: 0
+- maxPoints: 6
+  maxSeconds: 45
+  messages:
+  - 'Exception thrown: <class ''NotImplementedError''> -- TODO:'
+  - "  File \"grader.py\", line 93, in test1_3a_1\n    10)\n"
+  - "  File \"C:\\Users\\KB\\Desktop\\Rice\\Courses\\AI\\HW\\Comp557-Assignments\\\
+    text_classification\\submission.py\", line 118, in learnWeightsFromPerceptron\n\
+    \    raise NotImplementedError(\"TODO:\")\n"
+  name: 2.1.3a-1
+  points: 0
+  seconds: 0
+- maxPoints: 2
+  maxSeconds: 10
+  messages:
+  - 'Exception thrown: <class ''NotImplementedError''> -- TODO:'
+  - "  File \"grader.py\", line 112, in test_1_3b_0\n    grader.requireIsEqual(features,\
+    \ submission.extractBigramFeatures(sentence))\n"
+  - "  File \"C:\\Users\\KB\\Desktop\\Rice\\Courses\\AI\\HW\\Comp557-Assignments\\\
+    text_classification\\submission.py\", line 129, in extractBigramFeatures\n   \
+    \ raise NotImplementedError(\"TODO:\")\n"
+  name: 2.1.3b-0
+  points: 0
+  seconds: 0
+- maxPoints: 9
+  maxSeconds: 10
+  messages:
+  - 'Exception thrown: <class ''NotImplementedError''> -- TODO:'
+  - "  File \"grader.py\", line 158, in test_3a_0\n    zip( labels, [classifierA,\
+    \ classifierB, classifierC] ) )\n"
+  - "  File \"C:\\Users\\KB\\Desktop\\Rice\\Courses\\AI\\HW\\Comp557-Assignments\\\
+    text_classification\\submission.py\", line 164, in __init__\n    super(OneVsAllClassifier,\
+    \ self).__init__(labels, classifiers)\n"
+  - "  File \"C:\\Users\\KB\\Desktop\\Rice\\Courses\\AI\\HW\\Comp557-Assignments\\\
+    text_classification\\submission.py\", line 139, in __init__\n    raise NotImplementedError(\"\
+    TODO:\")\n"
+  name: 2.3a-0
+  points: 0
+  seconds: 0
+totalPoints: 4
