@@ -1,0 +1,4 @@
+Please install "pillow" package if you see the following error message:
+    ModuleNotFoundError: No module named 'PIL'
+
+
