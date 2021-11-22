@@ -101,7 +101,15 @@ class WeightedClassifier(Classifier):
         @return double y: classification score; >= 0 if positive label
         """
         # BEGIN_YOUR_CODE (around 2 lines of code expected)
-        raise NotImplementedError("TODO:")       
+        total = 0
+        feature = self.featureFunction(x)
+        for featureElement in feature:
+            if featureElement in self.params:
+                total += self.params[featureElement] * feature[featureElement]
+        if total >= 0:
+            return 1
+        else:
+            return -1
         # END_YOUR_CODE
 
 def learnWeightsFromPerceptron(trainExamples, featureExtractor, labels, iters = 20):
