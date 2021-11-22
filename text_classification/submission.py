@@ -41,7 +41,15 @@ class RuleBasedClassifier(Classifier):
         """
         super(RuleBasedClassifier, self).__init__(labels)
         # BEGIN_YOUR_CODE (around 3 lines of code expected) 
-        raise NotImplementedError("TODO:")       
+        self.blackSet = set()
+        
+        lenBlackList = k 
+        if k == -1 or k > len(blacklist):
+            lenBlackList = len(blacklist)
+
+        for i in range(lenBlackList):
+            self.blackSet.add(blacklist[i])
+        self.n = n
         # END_YOUR_CODE
 
     def classify(self, text):
@@ -50,7 +58,15 @@ class RuleBasedClassifier(Classifier):
         @return double y: classification score; >= 0 if positive label
         """
         # BEGIN_YOUR_CODE (around 8 lines of code expected)
-        raise NotImplementedError("TODO:")       
+        words = text.split()
+        cnt = 0
+
+        for word in words:
+            if word in self.blackSet:
+                cnt += 1
+            if cnt > self.n:
+                return -1
+        return 1
         # END_YOUR_CODE
 
 def extractUnigramFeatures(x):
