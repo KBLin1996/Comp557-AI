@@ -63,7 +63,7 @@ def part2(args):
         weights = submission.learnWeightsFromPerceptron(trainExamples, submission.extractBigramFeatures, labels, i)
         classifier = submission.WeightedClassifier(labels, submission.extractBigramFeatures, weights)
         evaluateClassifier(trainExamples, devExamples, classifier)
-        
+ 
 def part3(args):
     print ("Part 2.3 Topic Classification")
     examples = util.loadExamples(TRAIN_PATH_TOPICS)[:args.examples]

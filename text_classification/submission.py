@@ -123,7 +123,31 @@ def learnWeightsFromPerceptron(trainExamples, featureExtractor, labels, iters = 
     @return dict: parameters represented by a mapping from feature (string) to value.
     """
     # BEGIN_YOUR_CODE (around 15 lines of code expected)
-    raise NotImplementedError("TODO:")           
+    w = Counter()
+    featureList = list()
+
+    for x, y in trainExamples:
+        featureList.append(featureExtractor(x))
+
+    for i in range(iters):
+        for j in range(len(trainExamples)):
+            features = featureList[j]
+            y = trainExamples[j][1]
+            wTotal = 0
+            for feature in features:
+                # Calculating our expected wTotal according to our w record
+                if feature in w:
+                    wTotal += w[feature] * features[feature]
+            # We adjust our w if we have the wrong prediction
+            # The answer is "ham" but we predict "spam" => loosing w by using the feature vector of current x
+            if wTotal >= 0 and y == labels[1]:
+                for feature in features:
+                    w[feature] -= features[feature]
+            # The answer is "spam" but we predict "ham" => tighten w by using the feature vector of current x
+            if wTotal < 0 and y == labels[0]:
+                for feature in features:
+                    w[feature] += features[feature]
+    return w
     # END_YOUR_CODE
 
 def extractBigramFeatures(x):
@@ -134,7 +158,19 @@ def extractBigramFeatures(x):
     @return dict: feature vector representation of x.
     """
     # BEGIN_YOUR_CODE (around 12 lines of code expected)
-    raise NotImplementedError("TODO:")       
+    result = Counter()
+    # Append a signal at the very first of the sentence
+    words = ["."] + x.split()
+    puncuation = [".", "!", "?"]
+
+    for i in range(len(words)-1):
+        if words[i+1] not in puncuation:
+            result[words[i+1]] += 1
+            if words[i] not in puncuation:
+                result[words[i] + " " + words[i+1]] += 1
+            else:
+                result["-BEGIN-" + " " + words[i+1]] += 1
+    return result
     # END_YOUR_CODE
 
 class MultiClassClassifier(object):
@@ -177,10 +213,14 @@ class OneVsAllClassifier(MultiClassClassifier):
         @return list (string, double): list of labels with scores 
         """
         # BEGIN_YOUR_CODE (around 4 lines of code expected)
-        raise NotImplementedError("TODO:")       
+        result = list()
+
+        for label, _ in self.classifiers:
+            result.append(label, self.classifiers[label].classify(x))
+        return result
         # END_YOUR_CODE
 
-def learnOneVsAllClassifiers( trainExamples, featureFunction, labels, perClassifierIters = 10 ):
+def learnOneVsAllClassifiers(trainExamples, featureFunction, labels, perClassifierIters = 10):
     """
     Split the set of examples into one label vs all and train classifiers
     @param list trainExamples: list of (x,y) pairs, where
@@ -192,6 +232,16 @@ def learnOneVsAllClassifiers( trainExamples, featureFunction, labels, perClassif
     @return list (label, Classifier)
     """
     # BEGIN_YOUR_CODE (around 10 lines of code expected)
-    raise NotImplementedError("TODO:")       
-    # END_YOUR_CODE
+    result = list()
 
+    for label in labels:
+        newTrainingData = list()
+        newLabel = ("pos", "neg")
+        for x, y in trainExamples:
+            if y == label:
+                newTrainingData.append((x, "pos"))
+            else:
+                newTrainingData.append((x, "neg"))
+            result.append((label, WeightedClassifier(newLabel, featureFunction, learnWeightsFromPerceptron(newTrainingData, featureFunction, newLabel, perClassifierIters))))
+    return result
+    # END_YOUR_CODE
