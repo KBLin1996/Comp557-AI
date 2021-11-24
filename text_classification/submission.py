@@ -180,7 +180,9 @@ class MultiClassClassifier(object):
         @param list (string, Classifier): tuple of (label, classifier); each classifier is a WeightedClassifier that detects label vs NOT-label
         """
         # BEGIN_YOUR_CODE (around 2 lines of code expected)
-        raise NotImplementedError("TODO:")       
+        self.classifiers = {}
+        for label, classifier in classifiers:
+            self.classifiers[label] = classifier    
         # END_YOUR_CODE
 
     def classify(self, x):
@@ -196,7 +198,14 @@ class MultiClassClassifier(object):
         @return string y: one of the output labels
         """
         # BEGIN_YOUR_CODE (around 2 lines of code expected)
-        raise NotImplementedError("TODO:")       
+        score = self.classify(x)
+        label = score[0][0]
+        bestScore = score[0][1]
+        for i in range(1, len(score)):
+            if score[i][1] > bestScore:
+                label = score[i][0]
+                bestScore = score[i][1]
+        return label
         # END_YOUR_CODE
 
 class OneVsAllClassifier(MultiClassClassifier):
