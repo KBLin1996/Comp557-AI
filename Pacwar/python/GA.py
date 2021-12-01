@@ -121,7 +121,10 @@ class GA(object):
     def selection(self, geneList, scoreList):
         pop_size = len(geneList)
 
-        new_gene_idx = np.random.choice(pop_size, size=pop_size)
+        scoreSum = float(sum(scoreList))
+        prob = [(score / scoreSum) for score in scoreList]
+
+        new_gene_idx = np.random.choice(pop_size, size=pop_size, p=prob)
         new_gene = [geneList[i] for i in new_gene_idx]
         new_score = [scoreList[i] for i in new_gene_idx]
 
@@ -212,14 +215,14 @@ class GA(object):
 
 
 if __name__ == '__main__':
-    runID = "v1"
+    runID = "v2"
     init_population = 100
     np.random.seed(np.random.randint(1000))
 
     gene1 = list()
     #for i in range(init_population):
     #    gene1.append(np.random.randint(low=0, high=4, size=50).tolist())
-    gene1_string = "03000000030000000333322121231111221231131033133131"
+    gene1_string = "03000000021001033333322121231111221231131233133131"
     for i in range(init_population):
         gene_temp = list()
         for j in gene1_string:
