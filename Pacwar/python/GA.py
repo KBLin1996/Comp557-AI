@@ -11,14 +11,12 @@ class GA(object):
                 runID="v0"):
         self.gene1 = gene1
         self.gene2 = gene2
-        self.runID = runID
-        self.gene1 = gene1
-        self.gene2 = gene2
         self.population_size = population_size
         self.mutation_prob = mutation_prob
         self.turns = turns
         self.num_iters = num_iters
         self.eliminate_ratio = eliminate_ratio
+        self.runID = runID
 
 
     def get_scores(self, rounds, c1, c2):
@@ -219,9 +217,15 @@ if __name__ == '__main__':
     np.random.seed(np.random.randint(1000))
 
     gene1 = list()
+    #for i in range(init_population):
+    #    gene1.append(np.random.randint(low=0, high=4, size=50).tolist())
+    gene1_string = "03000000030000000333322121231111221231131033133131"
     for i in range(init_population):
-        gene1.append(np.random.randint(low=0, high=4, size=50).tolist())
+        gene_temp = list()
+        for j in gene1_string:
+            gene_temp.append(int(j))
+        gene1.append(gene_temp)
     gene2 = [[3 if i == 0 else 1 for _ in range(50)] for i in range(2)]
 
-    gaParwar = GA(gene1, gene2, population_size=100, mutation_prob=0.1, turns=100, num_iters=50, eliminate_ratio=0.2, runID=runID)
+    gaParwar = GA(gene1, gene2, population_size=100, mutation_prob=0.001, turns=100, num_iters=50, eliminate_ratio=0.2, runID=runID)
     gaParwar.train()
