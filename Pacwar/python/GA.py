@@ -72,9 +72,9 @@ class GA(object):
 
     def crossover(self, gene1, gene2, k):
         '''
-        gene1: a list represent gene
-        gene2: a list represent gene
-        k: cross over point, two genes will exchange the parts after the pivot
+        gene1: A list of improving gene
+        gene2: A list of comparing gene
+        k: Point to crossover, two genes will exchange the parts after this given pivot
         '''
         gene1, gene2 = gene1[:k] + gene2[k:], gene2[:k] + gene1[k:]
         return gene1, gene2
@@ -146,7 +146,7 @@ class GA(object):
                 avg_score2 = "{:.2f}".format(sum(score2) / float(len(score2)))
                 print(f"Turn: {t}, Step: {i}, Avg Score of Gene1: {avg_score1}, Gene2: {avg_score2}")
 
-            self.save_checkpoint(gene1, gene2, score1, score2, t, runID)
+            self.save_turn(gene1, gene2, score1, score2, t, runID)
             print(f"\nGene Saved!")
 
             mean_score1 = "{:.2f}".format(np.mean(score1))
@@ -162,26 +162,26 @@ class GA(object):
             print(f"\nTurn {t} completed, The poputation of the new gene 2 {len(gene2)}")
 
 
-            best_gene, best_score = self.topk(gene1, score1, k=1)
-            best_gene = "".join([str(i) for i in best_gene[0]])
-            best_score = "{:.2f}".format(best_score[0])
-            print(f"Gene1=> Best Gene: {best_gene}, Score: {best_score}")
+            top_gene, top_score = self.topk(gene1, score1, k=1)
+            top_gene = "".join([str(i) for i in top_gene[0]])
+            top_score = "{:.2f}".format(top_score[0])
+            print(f"Gene1=> Best Gene: {top_gene}, Score: {top_score}")
 
-            best_gene, best_score = self.topk(gene2, score2, k=1)
-            best_gene = "".join([str(i) for i in best_gene[0]])
-            best_score = "{:.2f}".format(best_score[0])
-            print(f"Gene2=> Best Gene: {best_gene}, Score: {best_score}")
+            top_gene, top_score = self.topk(gene2, score2, k=1)
+            top_gene = "".join([str(i) for i in top_gene[0]])
+            top_score = "{:.2f}".format(top_score[0])
+            print(f"Gene2=> Best Gene: {top_gene}, Score: {top_score}")
             gene1 = copy.deepcopy(gene2)
 
-        best_gene, best_score = self.topk(gene1, score1, k=1)
-        best_gene = "".join([str(i) for i in best_gene[0]])
-        best_score = "{:.2f}".format(best_score[0])
-        print(f"Gene1=> Best Gene: {best_gene}, Score: {best_score}")
+        top_gene, top_score = self.topk(gene1, score1, k=1)
+        top_gene = "".join([str(i) for i in top_gene[0]])
+        top_score = "{:.2f}".format(top_score[0])
+        print(f"Gene1=> Best Gene: {top_gene}, Score: {top_score}")
 
-        best_gene, best_score = self.topk(gene2, score2, k=1)
-        best_gene = "".join([str(i) for i in best_gene[0]])
-        best_score = "{:.2f}".format(best_score[0])
-        print(f"Gene2=> Best Gene: {best_gene}, Score: {best_score}")
+        top_gene, top_score = self.topk(gene2, score2, k=1)
+        top_gene = "".join([str(i) for i in top_gene[0]])
+        top_score = "{:.2f}".format(top_score[0])
+        print(f"Gene2=> Best Gene: {top_gene}, Score: {top_score}")
 
         return gene1, gene2
 
@@ -195,7 +195,7 @@ class GA(object):
         return gene[:k], score[:k]
 
 
-    def save_checkpoint(self, gene1, gene2, score1, score2, turn, runID):
+    def save_turn(self, gene1, gene2, score1, score2, turn, runID):
         gene1_dict, gene2_dict = {}, {}
 
         for i in range(len(gene1)):
@@ -215,13 +215,15 @@ class GA(object):
 
 
 if __name__ == '__main__':
-    runID = "v2"
+    runID = "v6"
     init_population = 100
     np.random.seed(np.random.randint(1000))
 
     gene1 = list()
     #for i in range(init_population):
     #    gene1.append(np.random.randint(low=0, high=4, size=50).tolist())
+
+    # Import gene that we want to improve
     gene1_string = "03000000021001033333322121231111221231131233133131"
     for i in range(init_population):
         gene_temp = list()
