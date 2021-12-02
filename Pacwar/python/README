@@ -1,4 +1,10 @@
-# This is an example PacWar python interface for comp440.
+# For this project, the main code is in GA.py.
+# You can simply execute "python GA.py" to evolve the gene
+# You can also change the gene you want to evolve in the main function,
+# and adjust the parameters based on your own preference.
+
+
+# This is an example PacWar python interface for comp557.
 #
 # Build tools for c++ should be installed on your computer. 
 # For example:
