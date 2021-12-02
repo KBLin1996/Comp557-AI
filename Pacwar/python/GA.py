@@ -19,37 +19,6 @@ class GA(object):
         self.runID = runID
 
 
-    def get_scores(self, rounds, c1, c2):
-        if c1 == c2:
-            return [10, 10]
-
-        species = [c1, c2]
-        scores = [0, 0]
-        winner = 0 if c1 > c2 else 1
-        loser = abs(1 - winner)
-
-        if species[loser] == 0:
-            if rounds < 100:
-                scores[winner], scores[loser] = 20, 0 
-            elif 100 <= rounds <= 199:
-                scores[winner], scores[loser] = 19, 1
-            elif 200 <= rounds <= 299:
-                scores[winner], scores[loser] = 18, 2
-            elif 300 <= rounds <= 500:
-                scores[winner], scores[loser] = 17, 3
-        else:
-            if species[winner] >= 10 * species[loser]:
-                scores[winner], scores[loser] = 13, 7
-            elif 3 * species[loser] <= species[winner] < 10 * species[loser]:
-                scores[winner], scores[loser] = 12, 8
-            elif 1.5 * scores[loser] <= species[winner] < 3 * species[loser]:
-                scores[winner], scores[loser] = 11, 9
-            else:
-                scores[winner], scores[loser] = 10, 10
-
-        return scores
-
-
     def evaluate(self, geneList1, geneList2, get_info=False):
         gene1_score = [0.0] * len(geneList1)
         gene2_score = [0.0] * len(geneList2)
@@ -58,7 +27,7 @@ class GA(object):
             for j in range(len(geneList2)):
                 (rounds, c1, c2) = _PyPacwar.battle(geneList1[i], geneList2[j])
                 
-                scores = self.get_scores(rounds, c1, c2)
+                scores = self.evaluate_scores(rounds, c1, c2)
                 gene1_score[i] += scores[0]
                 gene2_score[j] += scores[1]
 
@@ -129,6 +98,37 @@ class GA(object):
         new_score = [scoreList[i] for i in new_gene_idx]
 
         return new_score, new_gene
+
+
+    def evaluate_scores(self, rounds, c1, c2):
+        if c1 == c2:
+            return [10, 10]
+
+        species = [c1, c2]
+        scores = [0, 0]
+        winner = 0 if c1 > c2 else 1
+        loser = abs(1 - winner)
+
+        if species[loser] == 0:
+            if rounds < 100:
+                scores[winner], scores[loser] = 20, 0 
+            elif 100 <= rounds <= 199:
+                scores[winner], scores[loser] = 19, 1
+            elif 200 <= rounds <= 299:
+                scores[winner], scores[loser] = 18, 2
+            elif 300 <= rounds <= 500:
+                scores[winner], scores[loser] = 17, 3
+        else:
+            if species[winner] >= 10 * species[loser]:
+                scores[winner], scores[loser] = 13, 7
+            elif 3 * species[loser] <= species[winner] < 10 * species[loser]:
+                scores[winner], scores[loser] = 12, 8
+            elif 1.5 * scores[loser] <= species[winner] < 3 * species[loser]:
+                scores[winner], scores[loser] = 11, 9
+            else:
+                scores[winner], scores[loser] = 10, 10
+
+        return scores
 
 
     def train(self):
