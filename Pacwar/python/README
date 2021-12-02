@@ -3,6 +3,10 @@
 # You can also change the gene you want to evolve in the main function,
 # and adjust the parameters based on your own preference.
 
+# After execution, the code will automatically generate a directory called
+# "Genes/" to store all of the evolution genes in each turn.
+
+
 
 # This is an example PacWar python interface for comp557.
 #
