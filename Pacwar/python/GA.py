@@ -196,22 +196,24 @@ class GA(object):
 
 
     def save_turn(self, gene1, gene2, score1, score2, turn, runID):
-        gene1_dict, gene2_dict = {}, {}
+        gene1_dict = dict()
+        #gene2_dict = dict()
 
         for i in range(len(gene1)):
             gene_str = "".join([str(k) for k in gene1[i]])
             gene1_dict[gene_str] = score1[i]
-        for i in range(len(gene2)):
-            gene_str = "".join([str(k) for k in gene2[i]])
-            gene2_dict[gene_str] = score2[i]
+        #for i in range(len(gene2)):
+        #    gene_str = "".join([str(k) for k in gene2[i]])
+        #    gene2_dict[gene_str] = score2[i]
 
-        gene1_json_str, gene2_json_str = json.dumps(gene1_dict), json.dumps(gene2_dict)
+        gene1_json_str = json.dumps(gene1_dict)
+        #gene2_json_str = json.dumps(gene2_dict)
         if not os.path.exists("./Genes"):
             os.mkdir("./Genes")
         with open(f"Genes/{runID}_gene1_{turn}.json", "w") as f:
             json.dump(gene1_dict, f)
-        with open(f"Genes/{runID}_gene2_{turn}.json", "w") as f:
-            json.dump(gene2_dict, f)
+        #with open(f"Genes/{runID}_gene2_{turn}.json", "w") as f:
+        #    json.dump(gene2_dict, f)
 
 
 if __name__ == '__main__':
